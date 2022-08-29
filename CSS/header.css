@@ -11,7 +11,7 @@ header{
     z-index: 2;
 }
 .hname{
-    width: 110px;
+    width: 130px;
 }
 .hname a:hover {
     color: rgb(212, 197, 63);
@@ -31,7 +31,7 @@ header{
         font-size: 38px;
     }
     .hname{
-        width: 260px;
+        width: 310px;
     }
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){
@@ -40,6 +40,11 @@ header{
         font-size: 20px;
     }
     .hname{
-        width: 135px;
+        width: 165px;
+    }
+}
+@media screen and (max-device-width: 1300px) and (min-device-width: 800px){
+    .hname{
+        width: 130px;
     }
 }
