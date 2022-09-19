@@ -7,6 +7,7 @@ const But1 = document.querySelector('#SliCirc1');
 const But2 = document.querySelector('#SliCirc2');
 const But3 = document.querySelector('#SliCirc3');
 const But4 = document.querySelector('#SliCirc4');
+const But5 = document.querySelector('#SliCirc5');
 function Slides(){
     if(Slide == 1){
         Slider.style.backgroundImage = 'url(IMAGE/Shreks.jpg)';
@@ -15,7 +16,7 @@ function Slides(){
         But1.style.background = ColorUnactive;
     };  
     if(Slide == 2){
-        Slider.style.backgroundImage = 'url(IMAGE/Armenia.jpg)';
+        Slider.style.backgroundImage = 'url(IMAGE/KoshkaJena.jpg)';
         But2.style.background = ColorActive;
     } else{
         But2.style.background = ColorUnactive;
@@ -31,6 +32,12 @@ function Slides(){
         But4.style.background = ColorActive;
     } else{
         But4 .style.background = ColorUnactive;
+    };
+    if(Slide == 5){
+        Slider.style.backgroundImage = 'url(IMAGE/Armenia.jpg)';
+        But5.style.background = ColorActive;
+    } else{
+        But5 .style.background = ColorUnactive;
     };
 };
 
@@ -50,6 +57,10 @@ But3.addEventListener('click', function(){
 });
 But4.addEventListener('click', function(){
     Slide = 4;
+    Slides();
+});
+But5.addEventListener('click', function(){
+    Slide = 5;
     Slides();
 });
 

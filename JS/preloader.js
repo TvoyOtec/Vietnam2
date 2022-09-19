@@ -28,6 +28,6 @@ window.onload = setTimeout(function loaderCloseAnim() {
     preloader.style.animation = 'preloader 0.5s linear';
     setTimeout(function loaderClose(){
         preloader.style.display = 'none';
-    }, 500);
-}, 500);
+    }, 400);
+}, 200);
 

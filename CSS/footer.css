@@ -1,7 +1,7 @@
 footer{
     margin-top: 6%;
     position: relative;
-    height: 7%;
+    height: 80px;
     width: 100%;
     box-shadow: 0 10px 30px rgba(194, 193, 193, 0.815);
     background: rgb(255, 255, 255);
@@ -16,11 +16,17 @@ footer{
 }
 @media screen and (max-device-width: 500px){
     .Date{
-        font-size: 36px;
+        font-size: 46px;
+    }
+    footer{
+        height: 200px;
     }
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){
     .Date{
         font-size: 24px;
+    }
+    footer{
+        height: 100px;
     }
 }

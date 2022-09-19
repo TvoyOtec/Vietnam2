@@ -41,7 +41,7 @@
 
 @media screen and (max-device-width: 500px){
     .SliCirc{
-        height: 20px;
+        height: 25px;
         width: 90px;
         margin-left: 50px;
     }
@@ -51,8 +51,8 @@
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){
     .SliCirc{
-        height: 15px;
-        width: 60px;
+        height: 10px;
+        width: 50px;
         margin-left: 50px;
     }
     .SliPanel{

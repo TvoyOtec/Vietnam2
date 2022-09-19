@@ -27,8 +27,9 @@ header{
 
 @media screen and (max-device-width: 500px){
     header{
-        height: 190px;
+        height: 160px;
         font-size: 38px;
+        box-shadow: 0 0 15px rgba(167, 167, 167, 0.849);
     }
     .hname{
         width: 310px;

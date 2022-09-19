@@ -1,4 +1,6 @@
 @import url("slider.css");
+@import url("footer.css");
+@import url("header.css");
 .services{
     position: relative;
     display: block;
@@ -24,7 +26,7 @@
 }
 .ServiceElem{
     text-decoration: none;
-    width: 48%;
+    width: 578px;
     height: 300px;
     margin: 10px;
     position: relative;
@@ -70,12 +72,19 @@
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){
     .ServiceElem{
-        width: 47.5%;
+        width: 428px;
+        height:250px;
+    }
+    .Shtora h2{
+        margin-top: 100px;
     }
 }
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px){
     .ServiceElem{
-        width: 47%;
-        height: 300px;
+        width: 428px;
+        height:250px;
+    }
+    .Shtora h2{
+        margin-top: 100px;
     }
 }

@@ -9,34 +9,52 @@
 </head>  
 <body>
 <!-- preloader -->
-    <!-- <div class="preloader">
+    <div class="preloader">
         <svg class="progBarPos" width="240" height="240">
             <circle class="proBarCircle" stroke="white" stroke-width="6" cx="120" cy="120" r="108" fill="transparent"/>
         </svg>
-    </div> -->
+    </div>
 <!-- header -->
     <header>
-        <div class="hname"><a href="index.html"><h2>vietnam</h2></a></div>
+        <div class="hname2"><a href="index.html"><h2>V</h2></a></div>
+        <ul class="menu">
+            <li type="none"><a href="Console.html"><img src="IMAGE\command-line.png" alt=""></a></li>
+            <li type="none"><a href="Calc.html" class="calcIco"><img src="IMAGE\calculator.png" alt=""></a></li>
+            <li type="none"><a href="Coins.html"><img src="IMAGE\chinaIco.png" alt=""></a></li>
+        </ul>
+        <a href="#" class="butUpA"><span class="butUp"></span></a>
     </header>
 <!-- main --> 
     <main>
-        <div class="CoinSection">
-
-        </div>
-        <div class="CoinSection">
-            <div class="Center">Ты должен бить глупый злой тайвань для получения SOCIAL CREDITS</div>
-            <div class="Center"><a href="#" id="TaiwanBut"><img src="IMAGE/Taiwan.png" alt="" height="250px" width="100%"></a></div>
-        </div>
-        <div class="CoinSection">
-
+        <div class="mainEbat">
+            <div class="top">
+                <ul>
+                    <li type="none">
+                        <h3>ТЫ ДОЛЖЕН БИТЬ ГЛУПЫЙ ЗЛОЙ ТАЙВАНЬ ДЛЯ ПОЛУЧЕНИЯ <span class="socialName">SOCIAL CREDITS</span></h3>
+                    </li>
+                    <li type="none">
+                        <div class="info">
+                            <p class="CreditInfo">Social Credits: <span class="socCredit"></span></p>
+                            <p class="YanInfo">Зарплата: <span class="Yan">0</span>¥</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <div id="taiwanBut" class="taiwanBut" style="background-image: url(IMAGE/Taiwan.png);"></div>
+            </div>
+            <div class="bonusInfoPlace">
+                <h3 class="bonusInfo">Бонусы партии</h3>
+            </div>
+            <div class="bottom">
+                <ul class="bonusList">
+                    <a class="liA" href="#li" id="0"><li type="none" class="li"  id="0"><img class="liIMG" src="IMAGE/plus.png" alt="" id="0"><p class="YanPLus" id="0">1 ¥</p> <p class="socMinus" id="0">-250 social credit</p></li></a>
+                </ul> 
+            </div>
         </div>
     </main>
 <!-- footer -->
-    <footer>
-        <p class="Date" id="Date"></p>
-    </footer>
     <script src="js/preloader.js" type="text/javascript"></script>
-    <script src="JS/footer.js" type="text/javascript"></script>
     <script src="JS/Vcoin.js" type="text/javascript"></script>
 </body>
-</html>
+</html>            

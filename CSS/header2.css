@@ -1,0 +1,76 @@
+.hname2 a{
+    text-decoration: none;
+    color: #282828;
+    font-size: 28px;
+    transition: 0.4s;
+    font-family: 'Linux Libertine G', sans-serif;
+}
+.hname2 a:hover {
+    color: rgb(212, 197, 63);
+    transition: 0.4s;
+}
+.hname2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 74px;
+    margin-top: 47px;
+}
+header{
+    height: 102%;
+    width: 90px;
+    background: #FFFFFF;
+    position: fixed;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
+}
+.menu{
+    width: 46px;
+    height: 217px;
+    padding: 0;
+    margin-left: 23px;
+    margin-top: 300px;
+}
+.menu img{
+    width: 46px;
+    height: 46px;
+    margin-bottom: 41px;
+    transition: 0.4s;
+}
+.menu img:hover{
+    filter: invert(70%);
+    transition: 0.4s;
+}
+.butUpA{
+    display: block;
+    width: 56px;
+    height: 46px;
+    border-radius: 50%;
+    margin-left: 18px;
+    margin-top: 250px;
+    cursor: pointer;
+}
+.butUpA:hover 
+.butUp::before, 
+.butUpA:hover 
+.butUp::after{
+    filter: invert(70%);
+    transition: 0.4s;
+}
+.butUp::before,
+.butUp::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background: black;
+    transition: 0.4s;
+}
+.butUp::before{
+    transform: rotate(45deg);
+    left: 35px;
+}
+.butUp::after{
+    transform: rotate(-45deg);
+    left: 55px;
+}
