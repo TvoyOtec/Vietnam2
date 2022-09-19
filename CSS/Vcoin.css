@@ -100,7 +100,8 @@ main{
     height: 109px;
     border-radius: 35px;
     background: white;
-    margin-top: 60px;
+    margin-top: 30px;
+    margin-bottom: 60px;
     box-shadow: 5px 3px 5px rgba(182, 181, 181, 0.527);
     transition: 0.4s;
     overflow: hidden;
@@ -142,14 +143,128 @@ main{
     height: 109px;
     position: absolute;
     background: rgba(218, 33, 33, 0.658);
-    transform: translateX(1400px);
-    visibility: hidden;
+    transform: translateX(1400px) scaleX(0);
     z-index: -1;
 
 }
 .liA:hover .li::before{
     transition: 0.7s;
-    transform: translateX(-520px);
+    transform: translateX(-520px) scaleX(1);
     z-index: -1;
-    visibility: visible;
+}
+main{
+    height: 3500px;
+}
+@media screen and (max-device-width: 500px){
+    .top{
+        margin: 10px;
+        height: 700px;
+    }
+    .top h3{
+        font-size: 50px;
+        text-align: center;
+    }
+    .info{
+        margin-left:5px;
+        width: 950px;
+        height: 350px;
+    }
+    .YanInfo,
+    .CreditInfo{
+        font-size: 55px;
+        width: 900px;
+        height: 150px;
+    }
+    .YanInfo{
+        margin-top: 20px;
+        float: none;
+    }
+    .taiwanBut{
+        width: 720px;
+        height: 461px;
+    }
+    .middle{
+        margin-left: 20px;
+        margin-top: 140px;
+    }
+    .bonusInfo{
+        font-size: 60px;
+    }
+    .bonusInfo::before{
+        margin-top: 100px;
+        height: 5px;
+        width: 300px;
+        margin-left: 75px;
+    }
+    .bonusInfoPlace{
+        margin-top: 140px;
+        margin-left: 35px;
+    }
+    .li{
+        width: 900px;
+        height: 200px;
+    }
+    .bottom{
+        margin-left: 10px;
+    }
+    .YanPLus{
+        height: 100px;
+        width: 200px;
+        font-size: 65px;
+        margin-top: -80px;
+    }
+    .liIMG{
+        margin-top: 55px;
+        margin-left: 20px;
+        width: 86px;
+        height: 85px;
+    }
+    .socMinus{
+        font-size: 42px;
+        margin-top: -50px;
+    }
+    main{
+        height: 6000px;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-device-width: 800px) and (min-device-width: 500px){
+    .top h3{
+        font-size: 26px;
+    }
+    .YanInfo,
+    .CreditInfo{
+        font-size: 26px;
+    }
+    .bonusInfo{
+        font-size: 36px;
+        margin-top: 100px;
+    }
+    .bonusInfo::before{
+        margin-left: 62px;
+        width: 150px;
+    }
+    .li{
+        width: 653px;
+        height: 129px;
+    }
+    .YanPLus{
+        margin-top: -55px;
+        font-size: 32px;
+    }
+    .socMinus{
+        font-size: 24px;
+    }
+    .liIMG{
+        width: 66px;
+        height: 65px;
+        margin-top: 32px;
+    }
+    main{
+        height: 4000px;
+    }
 }
