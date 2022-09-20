@@ -23,6 +23,7 @@ header{
     background: #FFFFFF;
     position: fixed;
     box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
+    z-index: 10;
 }
 .menu{
     width: 46px;

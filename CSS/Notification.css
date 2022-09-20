@@ -1,0 +1,80 @@
+.SuccesNotif,
+.LessNotif{
+    width: 261px;
+    height: 64px;
+    background: white;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 16px;
+    box-shadow: 0 0 7px rgba(124, 124, 124, 0.356);
+    transition: 1s;
+    z-index: 10;
+}
+.SuccesNotif img,
+.LessNotif img{
+    width: 42px;
+    margin-top: 11px;
+    margin-left: 15px;
+}
+.LessNotif img{
+    width: 38px;
+}
+.SuccesNotif,
+.LessNotif{
+    opacity: 0;
+}
+.SuccesNotif span,
+.LessNotif span{
+    margin-left: 40px;
+    position: absolute;
+    margin-top: 23px;
+    width: 300px;
+}
+.LessNotif span{
+    margin-left: 18px;
+}
+
+@media screen and (max-device-width: 500px){
+    .SuccesNotif,
+    .LessNotif{
+        width: 561px;
+        height: 144px;
+        margin-top: 20px;
+    }
+    .SuccesNotif img,
+    .LessNotif img{
+        width: 96px;
+        margin-top: 20px;
+    }
+    .LessNotif img{
+        width: 88px;
+    }
+    .SuccesNotif span,
+    .LessNotif span{
+        font-size: 40px;
+        margin-left: 60px;
+    }
+}
+
+
+
+@media screen and (max-device-width: 800px) and (min-device-width: 500px){
+    .SuccesNotif,
+    .LessNotif{
+        width: 361px;
+        height: 84px;
+    }
+    .SuccesNotif img,
+    .LessNotif img{
+        width: 56px;
+    }
+    .LessNotif img{
+        width: 48px;
+    }
+    .SuccesNotif span,
+    .LessNotif span{
+        font-size: 24px;
+    }
+}
+
