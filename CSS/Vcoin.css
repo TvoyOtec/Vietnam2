@@ -139,23 +139,6 @@ body{
     transform: translateX(-30px);
     transition: 0.4s;
 }
-/* .li::before{
-    border-radius:  35px;
-    transition: 0.7s;
-    content: '';
-    width: 533px;
-    height: 109px;
-    position: absolute;
-    background: rgba(218, 33, 33, 0.658);
-    transform: translateX(1400px) scaleX(0);
-    z-index: -1;
-
-}
-.liA:hover .li::before{
-    transition: 0.7s;
-    transform: translateX(-520px) scaleX(1);
-    z-index: -1;
-} */
 main{
     height: 3500px;
 }

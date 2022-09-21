@@ -32,15 +32,42 @@ header{
     margin-left: 23px;
     margin-top: 300px;
 }
+.menu li{
+    margin-bottom: 41px;
+    width: 50px;
+    height: 50px;
+    transition: 0.4s;
+    border-radius: 5px;
+}
 .menu img{
     width: 46px;
     height: 46px;
-    margin-bottom: 41px;
+    transition: 0.4s;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+.menu li:hover{
     transition: 0.4s;
 }
-.menu img:hover{
-    filter: invert(70%);
+.menu li:hover img{
+    filter: invert(100%);
+    width: 40px;
+    height: 40px;
     transition: 0.4s;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.CMButton:hover{
+    box-shadow: 0 0 20px rgb(13, 162, 199);
+    background: rgb(13, 162, 199);
+}
+.CalculateButton:hover{
+    box-shadow: 0 0 20px rgb(24, 185, 18);
+    background: rgb(24, 185, 18);
+}
+.ChinaButton:hover{
+    box-shadow: 0 0 20px rgb(177, 78, 78);
+    background: rgb(180, 89, 89);
 }
 .butUpA{
     display: block;
@@ -116,6 +143,19 @@ header{
     }
     #headerMobileOnly{
         display: inline-block;
+    }
+    .menu li:hover img{
+        filter: invert(70%);
+        margin: 0;
+        width: 76px;
+        height: 76px;
+        padding: 0;
+    }
+    .ChinaButton:hover,
+    .CalculateButton:hover,
+    .CMButton:hover{
+        box-shadow: inherit;
+        background: inherit;
     }
 }
 

@@ -7,8 +7,8 @@ const list = document.querySelector('.bonusList');
 const button = document.querySelector('#taiwanBut');
 const rateinfo = document.querySelector('.socCredit');
 const yaninfo = document.querySelector('.Yan');
-const SuccessNotify = document.querySelector('.SuccesNotif');
-const FailedNotify = document.querySelector('.LessNotif');
+const SuccessNotify = document.querySelector('.SuccesNotifSmall');
+const FailedNotify = document.querySelector('.LessNotifSmall');
 
 // boosts
 while(kolvo < 21){
@@ -53,6 +53,7 @@ button.addEventListener('click', function plus(){
     console.log(socrating);
     ratingMonitor();
 });
+
 // notification
 function success(){
     SuccessNotify.style.opacity = "1";
@@ -64,7 +65,7 @@ function failed(){
 }
 
 
-
+// boost add script
 list.addEventListener('click', e => {
     let ids = parseInt(e.target.id);
     if(ids == 0 && socrating >= oneCost){
