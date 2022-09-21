@@ -42,7 +42,7 @@ function AddPayDay(many){
 }
 
 inputConsole.addEventListener('keyup', function(e) {
-    if(e.code == "Enter"){
+    if(e.code == "Enter" || e.code == "Next"){
         YourCommandWriter()
         let huys = Count;
         let preCommandNum = huys - 2;
