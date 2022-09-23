@@ -8,19 +8,66 @@ body{
 }
 .calculator{
     width: 400px;
-    height: 600px;
+    height: 620px;
     margin-top: 200px;
     margin-left: 100px;
-    background: rgb(34, 34, 34);
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(59, 59, 59),
+    0 0 10px white,
+    inset 0 0 30px rgb(255, 255, 255);
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;   
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;       
+}
+.calcBackground{
+    width: 400px;
+    height: 620px;
+    border-radius: 30px;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    margin-top: -92px;
+}
+.calcBackground div{
+    width: 800px;
+    height: 800px;
+    /* background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen; */
+    background: -webkit-linear-gradient(90deg, #babb73,#f5984d,#f57a7a);
+    background: linear-gradient(90deg, #babb73,#f5984d,#f57a7a);
+    animation: backgroundCalc 3s linear infinite;
+    margin-left: -140px;
+    margin-top: -90px;
+}
+
+@keyframes backgroundCalc {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+
+    }
 }
 .inputCalc{
-    width: 98%;
-    height: 60px;
+    width: 100%;
+    height: 70px;
     margin-top: 20px;
     outline: none;
-    font-size: 40px;
+    font-size: 30px;
+    z-index: 2;
+    border: none;
+    background: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(10px);
+    color: rgb(236, 229, 216);
+    padding-left: 15px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -28,13 +75,13 @@ input::-webkit-inner-spin-button {
 
 }
 .calcNumers{
-    width: 99.7%;
+    width: 100%;
     height: 514px;
-    background: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0;
-    border:1px solid black;
     border-radius: 5px;
+    border-radius: 15px;
+    z-index: 2;
 }
 .calcNum,
 .calcNumAction{
@@ -43,11 +90,19 @@ input::-webkit-inner-spin-button {
     margin-top: 13px;
     margin-left: 13px;
     height: 80px;
-    background: rgb(0, 0, 0);
     color: white;
     text-align: center;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
     cursor: pointer;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.171);
+    transition: 0.4s;
+}
+.calcNum:hover,
+.calcNumAction:hover{
+    background: rgba(255, 255, 255, 0.822);
+    color:rgb(109, 109, 109);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transition: 0.4s;
 }
 .calcNum p,
 .calcNumAction p{
@@ -55,6 +110,7 @@ input::-webkit-inner-spin-button {
     margin-top: 20px;
 }
 .historyList{
+    overflow: auto;
     padding: 0;
     display: block;
     position: relative;
@@ -72,13 +128,77 @@ input::-webkit-inner-spin-button {
     font-size: 18px;
 }
 @media screen and (max-device-width: 500px){
-
+    .calculator{
+        width: 800px;
+        height: 1350px;
+        margin-left: 85px;
+    }
+    .calcNum,
+    .calcNumAction{
+        width: 180px;
+        height: 180px;
+        margin-top: 40px;
+    }
+    .historyList{
+        margin-left: 196px;
+        margin-top: 50px;
+        width: 600px;
+    }
+    .historyList li{
+        font-size: 50px;
+    }
+    .calcBackground{
+        width: 800px;
+        height: 1350px;
+        margin-top: -183px;
+    }
+    .calcBackground div{
+        height: 1700px;
+        width: 1700px;
+        margin-top: -160px;
+        margin-left: -350px;
+    }
+    .calcNum p,
+    .calcNumAction p{
+        margin-top: 45px;
+        font-size: 70px;
+    }
+    .inputCalc{
+        height: 160px;
+        font-size: 90px;
+    }
+    .historyList{
+        width: 800px;
+        height: 1200px;
+        margin-left: 80px;
+    }
+    .mainEbat{
+        height: 3000px;
+    }
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){
-
+    .calculator{
+        margin-left: 300px;
+        margin-top: 100px;
+    }
+    .historyList{
+        margin-left: 196px;
+        margin-top: 50px;
+        width: 600px;
+    }
+    .historyList li{
+        font-size: 30px;
+    }
 }
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px){
     .calculator{
-        margin-left: 250px;
+        margin-left: 90px;
+    }
+    .historyList{
+        margin-left: 530px;
+        width: 400px;
+    }
+    .historyList li{
+        font-size: 20px;
     }
 }

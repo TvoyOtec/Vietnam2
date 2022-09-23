@@ -49,7 +49,7 @@ body{
     font-size: 18px;
     margin-bottom: 0;
     margin-top: 15px;
-    color: rgb(113, 112, 112) 
+    color: rgb(113, 112, 112);
 }
 .mobileBut{
     display: none;
@@ -68,11 +68,23 @@ body{
     border-radius: 15px;
     box-shadow: 0 0 10px rgb(30, 142, 207);
     transition: 0.5s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;   
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;       
 }
 .mobileBut:hover{
     background: rgb(15, 72, 105);
     box-shadow: 0 0 10px rgb(13, 67, 99);
     transition: 0.5s;
+}
+.OutTextgreen{
+    color: rgb(52, 121, 25);
+}
+.darkOutTextgreen{
+    color: rgb(114, 197, 107);
 }
 @media screen and (max-device-width: 500px){
     .console{

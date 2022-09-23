@@ -3,7 +3,9 @@ const OutputConsole = document.querySelector('.viewConsole');
 const SuccessNotifyCommand = document.querySelector('.SuccesNotif');
 const SpanNotifyCommand = document.querySelector('#SpanNotify')
 const ButtonMobile = document.querySelector('.mobileBut')
+const console = document.querySelector('.console')
 let Count = 1;
+let darkmode = false;
 
 function successCommand(f){
     SpanNotifyCommand.innerHTML = f;
@@ -25,7 +27,11 @@ function OutpCommand(name){
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`)
     OutputConsolep.innerHTML = `-${name}`;
     OutputConsolep.className = 'outputConsole';
-    OutputConsolep.style.color = 'rgb(126, 25, 25)';
+    if(darkmode){
+            OutputConsolep.style.color = 'rgb(250, 71, 71)';
+    } else {
+        OutputConsolep.style.color = 'rgb(126, 25, 25)';
+    }
     OutputConsole.append(OutputConsolep);
     OutputConsole.scrollTo(0, Count * 100)
 }
@@ -36,8 +42,12 @@ function YourCommandWriter(){
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`);
     OutputConsolep.className = 'outputConsole';
     OutputConsolep.innerHTML = `-${inputConsole.value}`;
+    if(darkmode){
+        OutputConsolep.style.color = 'rgb(114, 197, 107)';
+    } else {
+        OutputConsolep.style.color = 'rgb(52, 121, 25)';
+    }
     OutputConsole.append(OutputConsolep);
-    OutputConsolep.style.color = 'rgb(52, 121, 25)';
 }
 
 function AddCoins(many){
@@ -48,6 +58,16 @@ function AddCoins(many){
 function AddPayDay(many){
     localStorage.setItem("yantick", many)
     OutputConsole.scrollTo(0, Count * 100)
+}
+
+function DarkMode(){
+    darkmode = true
+    console.style.background = "rgb(65, 65, 65)"
+}
+
+function LightMode(){
+    darkmode = false
+    console.style.background = "white"
 }
 
 function Main(e){
@@ -79,7 +99,15 @@ function Main(e){
             OutpCommand("changecoins");
             OutpCommand("buttonoff");
             OutpCommand("buttonon");
-        }else{
+            OutpCommand("darkmode");
+            OutpCommand("lightmode");
+        }else if(inputConsole.value == "darkmode"){
+            DarkMode()
+            successCommand(`Включена темная тема`)
+        }else if(inputConsole.value == "lightmode"){
+            LightMode()
+            successCommand(`Включена светлая тема`)
+        }else {
             OutpCommand("Unknown command");
  
         inputConsole.value = "";
