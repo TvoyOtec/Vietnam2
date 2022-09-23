@@ -1,0 +1,84 @@
+@import url("header2.css");
+main{
+    margin: 0;
+    height: 100%;
+}
+body{
+    touch-action: manipulation;
+}
+.calculator{
+    width: 400px;
+    height: 600px;
+    margin-top: 200px;
+    margin-left: 100px;
+    background: rgb(34, 34, 34);
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
+}
+.inputCalc{
+    width: 98%;
+    height: 60px;
+    margin-top: 20px;
+    outline: none;
+    font-size: 40px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+.calcNumers{
+    width: 99.7%;
+    height: 514px;
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 0;
+    border:1px solid black;
+    border-radius: 5px;
+}
+.calcNum,
+.calcNumAction{
+    display: inline-block;
+    width: 80px;
+    margin-top: 13px;
+    margin-left: 13px;
+    height: 80px;
+    background: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+.calcNum p,
+.calcNumAction p{
+    font-size: 30px;
+    margin-top: 20px;
+}
+.historyList{
+    padding: 0;
+    display: block;
+    position: relative;
+    height: 600px;
+    width: 600px;
+    margin-left: 700px;
+    margin-top: -600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.253);
+    background: white;
+}
+.historyList li{
+    margin-left: 20px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+@media screen and (max-device-width: 500px){
+
+}
+@media screen and (max-device-width: 800px) and (min-device-width: 500px){
+
+}
+@media screen and (max-device-width: 1300px) and (min-device-width: 800px){
+    .calculator{
+        margin-left: 250px;
+    }
+}

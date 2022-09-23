@@ -2,6 +2,7 @@ const inputConsole = document.querySelector('#InputConsole');
 const OutputConsole = document.querySelector('.viewConsole');
 const SuccessNotifyCommand = document.querySelector('.SuccesNotif');
 const SpanNotifyCommand = document.querySelector('#SpanNotify')
+const ButtonMobile = document.querySelector('.mobileBut')
 let Count = 1;
 
 function successCommand(f){
@@ -10,13 +11,21 @@ function successCommand(f){
     setTimeout("SuccessNotifyCommand.style.opacity = '0' ", 2000);
 }
 
+function buttonOn(){
+    ButtonMobile.style.display = 'flex';
+}
+
+function buttonOff(){
+    ButtonMobile.style.display = 'none';
+}
+
 function OutpCommand(name){
     const OutputConsolep = document.createElement('p')
     Count++;
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`)
     OutputConsolep.innerHTML = `-${name}`;
     OutputConsolep.className = 'outputConsole';
-    OutputConsolep.style.color = 'red';
+    OutputConsolep.style.color = 'rgb(126, 25, 25)';
     OutputConsole.append(OutputConsolep);
     OutputConsole.scrollTo(0, Count * 100)
 }
@@ -28,7 +37,7 @@ function YourCommandWriter(){
     OutputConsolep.className = 'outputConsole';
     OutputConsolep.innerHTML = `-${inputConsole.value}`;
     OutputConsole.append(OutputConsolep);
-    OutputConsolep.style.color = 'green';
+    OutputConsolep.style.color = 'rgb(52, 121, 25)';
 }
 
 function AddCoins(many){
@@ -41,8 +50,7 @@ function AddPayDay(many){
     OutputConsole.scrollTo(0, Count * 100)
 }
 
-inputConsole.addEventListener('keyup', function(e) {
-    if(e.code == "Enter" || e.keycode == "39" || e.keycode == "13"){
+function Main(e){
         YourCommandWriter()
         let huys = Count;
         let preCommandNum = huys - 2;
@@ -60,11 +68,32 @@ inputConsole.addEventListener('keyup', function(e) {
             let PaydayCome = parseInt(inputConsole.value);
             AddPayDay(PaydayCome)
             successCommand(`Заралата теперь равна ${PaydayCome}`)
-        } else {
+        } else if(inputConsole.value == "buttonon"){
+            buttonOn()
+            successCommand(`Кнопка включена`)
+        } else if(inputConsole.value == "buttonoff"){
+            buttonOff()
+            successCommand(`Кнопка выключена`)
+        } else if(inputConsole.value == "help"){
+            OutpCommand("changepayday");
+            OutpCommand("changecoins");
+            OutpCommand("buttonoff");
+            OutpCommand("buttonon");
+        }else{
             OutpCommand("Unknown command");
-        }
  
         inputConsole.value = "";
     };
 
+}
+
+inputConsole.addEventListener('keyup', function(e){
+    if(e.code == "Enter" || e.keycode == "39" || e.keycode == "13"){
+        Main(e)
+        inputConsole.value = "";
+    }
+})
+ButtonMobile.addEventListener('click', function(e){
+    Main(e)
+    inputConsole.value = "";
 })

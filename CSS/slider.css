@@ -10,7 +10,6 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* filter:brightness(0.9); */
     box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.411);
 }
 .SliderPos{
@@ -47,6 +46,9 @@
     }
     .SliPanel{
         margin-top: 60px;
+    }
+    .SliderPos{
+        height: 700px;
     }
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){

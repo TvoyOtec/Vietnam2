@@ -14,13 +14,12 @@ body{
     inset 0 0 10px rgba(0, 0, 0, 0.247);
     width: 1000px;
     height: 612px;
-    margin-top: 250px;
+    margin-top: 150px;
     margin-left: 150px;
 }
 .viewConsole{
     height: 100%;
     width: 100%;
-    /* border-bottom: 1px solid rgba(99, 99, 99, 0.705); */
     overflow-y: auto;
 }
 .inputConsole{
@@ -29,7 +28,6 @@ body{
     background: rgba(255, 255, 255, 0.103);
     position: absolute;
     margin-top: -612px;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.123);
     z-index: 2;
     backdrop-filter: blur(5px);
 }
@@ -51,7 +49,30 @@ body{
     font-size: 18px;
     margin-bottom: 0;
     margin-top: 15px;
-    color: rgb(113, 112, 112)
+    color: rgb(113, 112, 112) 
+}
+.mobileBut{
+    display: none;
+}
+.mobileBut{
+    display: flex;
+    width: 280px;
+    height: 70px;
+    background: rgb(30, 142, 207);
+    margin-left: 490px;
+    margin-top: 50px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(30, 142, 207);
+    transition: 0.5s;
+}
+.mobileBut:hover{
+    background: rgb(15, 72, 105);
+    box-shadow: 0 0 10px rgb(13, 67, 99);
+    transition: 0.5s;
 }
 @media screen and (max-device-width: 500px){
     .console{
@@ -70,32 +91,58 @@ body{
     }
     .inputConsole input{
         font-size: 80px;
+        height: 110px;
+    }
+    .mobileBut{
+        width: 500px;
+        height: 150px;
+        margin-left: 220px;
+        margin-top: 50px;
+        font-size: 60px;
     }
 }
 @media screen and (max-device-width: 800px) and (min-device-width: 500px){
     .console{
         width: 870px;
         margin-left: 60px;
-        height: 800px;
+        height: 700px;
+        margin-top: 200px;
     }
     .outputConsole{
         font-size: 24px;
+        padding-top: 9px;
     }
     .inputConsole{
-        margin-top: -800px;
+        margin-top: -701px;
         height: 72px;
         width: 850px;
     }
     .inputConsole input{
         font-size: 34px;
     }
+    .mobileBut{
+        width: 300px;
+        height: 80px;
+        margin-left: 320px;
+        font-size: 35px;
+    }
 }
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px){
     .console{
         margin-left: 90px;
         width: 820px;
+        margin-top: 200px;
+        height: 600px;
     }
     .inputConsole{
         width: 802px;
+        margin-top: -600px;
+    }
+    .mobileBut{
+        width: 250px;
+        height: 70px;
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: 370px;
     }
 }

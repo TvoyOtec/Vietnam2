@@ -1,6 +1,6 @@
 let kolvo = 1;
 let yanBuy = 5;
-const oneCost = 500;
+const oneCost = 1000;
 let socrating = parseInt(localStorage.getItem('ratetick'), 10);
 let yan = parseInt(localStorage.getItem('yantick'), 10);;
 const list = document.querySelector('.bonusList');
