@@ -7,8 +7,8 @@ circle.style.strokeDasharray = `${dlina} ${dlina}`;
 circle.style.strokeDashoffset = dlina;
 
 function progress(percent) {
-    const offset = dlina - percent / 100 * dlina;
-    circle.style.strokeDashoffset = offset;
+  const offset = dlina - percent / 100 * dlina;
+  circle.style.strokeDashoffset = offset;
 }
 
 let s = 0
@@ -16,18 +16,18 @@ let s = 0
 var id = setInterval(frame, 1);
 
 function frame() {
-    if (s == 100) {
-        clearInterval(id);
-    } else {
-        s++;
-        progress(s)
-    }
+  if (s == 100) {
+    clearInterval(id);
+  } else {
+    s++;
+    progress(s)
+  }
 }
 
 window.onload = setTimeout(function loaderCloseAnim() {
-    preloader.style.animation = 'preloader 0.5s linear';
-    setTimeout(function loaderClose(){
-        preloader.style.display = 'none';
-    }, 400);
+  preloader.style.animation = 'preloader 0.5s linear';
+  setTimeout(function loaderClose() {
+    preloader.style.display = 'none';
+  }, 400);
 }, 200);
 

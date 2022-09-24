@@ -2,60 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
 
-body{
-    margin-left: -1px;
-    margin-right: 1px;
-    margin-top: -20px;
-    width: 100%;
-    height: 100%;
-    background: rgb(238, 238, 238);
-    overflow-x: hidden;
+body {
+  margin-left: -1px;
+  margin-right: 1px;
+  margin-top: -20px;
+  width: 100%;
+  height: 100%;
+  background: rgb(238, 238, 238);
+  overflow-x: hidden;
 }
-main{
-    width: 100%;
-    display: flex;
-    margin-top: 5%;
-    justify-content: center;
+
+main {
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  height: 1700px;
+}
+
+.mainEbat {
+  width: 1200px;
+}
+
+::-webkit-scrollbar {
+  background: rgba(184, 183, 183, 0.521);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 37, 37, 0.582);
+}
+
+
+
+@media screen and (max-device-width: 500px) {
+  main {
+    margin-top: 34%;
+    height: 3700px;
+  }
+
+  .mainEbat {
+    width: 950px;
+  }
+}
+
+@media screen and (max-device-width: 800px) and (min-device-width: 500px) {
+  main {
+    margin-top: 20%;
+    height: 1800px;
+  }
+
+  .mainEbat {
+    width: 900px;
+  }
+}
+
+@media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
+  .mainEbat {
+    width: 900px;
+  }
+
+  main {
+    margin-top: 10%;
     height: 1700px;
-}
-.mainEbat{
-    width: 1200px;
-}
-::-webkit-scrollbar{
-    background: rgba(184, 183, 183, 0.521);
-}
-::-webkit-scrollbar-thumb{
-    background: rgba(37, 37, 37, 0.582);
-}
-
-
-
-@media screen and (max-device-width: 500px){
-    main{
-        margin-top: 34%;
-        height: 3700px;
-    }
-    .mainEbat{
-        width: 950px;
-    }
-}
-
-@media screen and (max-device-width: 800px) and (min-device-width: 500px){
-    main{
-        margin-top: 20%;
-        height: 1800px;
-    }
-    .mainEbat{
-        width: 900px;
-    }
-}
-
-@media screen and (max-device-width: 1300px) and (min-device-width: 800px){
-    .mainEbat{
-        width: 900px;
-    }
-    main{
-        margin-top: 10%;
-        height: 1700px;
-    }
+  }
 }

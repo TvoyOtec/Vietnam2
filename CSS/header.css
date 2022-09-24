@@ -1,51 +1,58 @@
-header{
-    top: 0%;
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 55px;
-    box-shadow: 0 0 10px rgba(194, 193, 193, 0.815);
-    background: rgb(255, 255, 255);
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-.hname{
-    width: 130px;
-}
-.hname a:hover {
-    color: rgb(212, 197, 63);
-}
-.hname a{
-    text-decoration: none;
-    color: rgb(41, 40, 40);
-    text-transform: uppercase;
-    font-family: 'Syncopate', sans-serif;
-    cursor: pointer;
-    transition: 0.6s;
+header {
+  top: 0%;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 0 10px rgba(194, 193, 193, 0.815);
+  background: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
-@media screen and (max-device-width: 500px){
-    header{
-        height: 160px;
-        font-size: 38px;
-        box-shadow: 0 0 15px rgba(167, 167, 167, 0.849);
-    }
-    .hname{
-        width: 310px;
-    }
+.hname {
+  width: 130px;
 }
-@media screen and (max-device-width: 800px) and (min-device-width: 500px){
-    header{
-        height: 90px;
-        font-size: 20px;
-    }
-    .hname{
-        width: 165px;
-    }
+
+.hname a:hover {
+  color: rgb(212, 197, 63);
 }
-@media screen and (max-device-width: 1300px) and (min-device-width: 800px){
-    .hname{
-        width: 130px;
-    }
+
+.hname a {
+  text-decoration: none;
+  color: rgb(41, 40, 40);
+  text-transform: uppercase;
+  font-family: 'Syncopate', sans-serif;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+@media screen and (max-device-width: 500px) {
+  header {
+    height: 160px;
+    font-size: 38px;
+    box-shadow: 0 0 15px rgba(167, 167, 167, 0.849);
+  }
+
+  .hname {
+    width: 310px;
+  }
+}
+
+@media screen and (max-device-width: 800px) and (min-device-width: 500px) {
+  header {
+    height: 90px;
+    font-size: 20px;
+  }
+
+  .hname {
+    width: 165px;
+  }
+}
+
+@media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
+  .hname {
+    width: 130px;
+  }
 }

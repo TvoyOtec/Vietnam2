@@ -1,148 +1,172 @@
 .SuccesNotifSmall,
 .LessNotifSmall,
 .LessNotif,
-.SuccesNotif{
-    background: white;
-    position: fixed;
-    border-radius: 16px;
-    box-shadow: 0 0 7px rgba(124, 124, 124, 0.356);
-    transition: 1s;
-    z-index: 10;
+.SuccesNotif {
+  background: white;
+  position: fixed;
+  border-radius: 16px;
+  box-shadow: 0 0 7px rgba(124, 124, 124, 0.356);
+  transition: 1s;
+  z-index: 10;
 }
+
 .SuccesNotifSmall,
-.LessNotifSmall{
-    right: 10px;
-    top: 10px;
-    width: 261px;
-    height: 64px;
-    opacity: 0;
+.LessNotifSmall {
+  right: 10px;
+  top: 10px;
+  width: 261px;
+  height: 64px;
+  opacity: 0;
 }
+
 .SuccesNotifSmall img,
-.LessNotifSmall img{
-    width: 42px;
-    margin-top: 11px;
-    margin-left: 15px;
+.LessNotifSmall img {
+  width: 42px;
+  margin-top: 11px;
+  margin-left: 15px;
 }
-.LessNotifSmall img{
-    width: 38px;
+
+.LessNotifSmall img {
+  width: 38px;
 }
+
 .SuccesNotifSmall span,
-.LessNotifSmall span{
-    margin-left: 40px;
-    position: absolute;
-    margin-top: 23px;
-    width: 300px;
+.LessNotifSmall span {
+  margin-left: 40px;
+  position: absolute;
+  margin-top: 23px;
+  width: 300px;
 }
-.LessNotifSmall span{
-    margin-left: 18px;
+
+.LessNotifSmall span {
+  margin-left: 18px;
 }
+
 .LessNotif,
-.SuccesNotif{
-    width: 1250px;
-    height: 80px;
-    margin-top: 40px;
-    opacity: 0;
+.SuccesNotif {
+  width: 1250px;
+  height: 80px;
+  margin-top: 40px;
+  opacity: 0;
 }
+
 .LessNotif img,
-.SuccesNotif img{
-    width: 52px;
-    margin-top: 13px;
-    margin-left: 20px;
+.SuccesNotif img {
+  width: 52px;
+  margin-top: 13px;
+  margin-left: 20px;
 }
+
 .SuccesNotif span,
-.LessNotif span{
+.LessNotif span {
+  margin-left: 20px;
+  position: absolute;
+  margin-top: 30px;
+  width: 300px;
+  font-size: 20px;
+}
+
+@media screen and (max-device-width: 500px) {
+
+  .SuccesNotifSmall,
+  .LessNotifSmall {
+    width: 561px;
+    height: 144px;
+    margin-top: 20px;
+  }
+
+  .SuccesNotifSmall img,
+  .LessNotifSmall img {
+    width: 96px;
+    margin-top: 20px;
+  }
+
+  .LessNotifSmall img {
+    width: 88px;
+  }
+
+  .SuccesNotifSmall span,
+  .LessNotifSmall span {
+    font-size: 40px;
+    margin-left: 60px;
+  }
+
+  .LessNotif,
+  .SuccesNotif {
+    width: 890px;
+    height: 80px;
+    margin-left: 30px;
+    height: 160px;
+  }
+
+  .LessNotif img,
+  .SuccesNotif img {
+    margin-top: 25px;
+    margin-left: 30px;
+    width: 102px;
+
+  }
+
+  .SuccesNotif span,
+  .LessNotif span {
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 40px;
+    width: 600px;
+  }
+}
+
+
+@media screen and (max-device-width: 800px) and (min-device-width: 500px) {
+
+  .SuccesNotifSmall,
+  .LessNotifSmall {
+    width: 361px;
+    height: 84px;
+  }
+
+  .SuccesNotifSmall img,
+  .LessNotifSmall img {
+    width: 56px;
+  }
+
+  .LessNotifSmall img {
+    width: 48px;
+  }
+
+  .SuccesNotifSmall span,
+  .LessNotifSmall span {
+    font-size: 24px;
+  }
+
+  .LessNotif,
+  .SuccesNotif {
+    width: 860px;
+    height: 80px;
+    margin-left: 65px;
+    height: 90px;
+  }
+
+  .LessNotif img,
+  .SuccesNotif img {
+    width: 62px;
+  }
+
+  .SuccesNotif span,
+  .LessNotif span {
+    font-size: 32px;
+    width: 600px;
+    margin-top: 25px;
     margin-left: 20px;
-    position: absolute;
-    margin-top: 30px;
-    width: 300px;
-    font-size: 20px;
-}
-@media screen and (max-device-width: 500px){
-    .SuccesNotifSmall,
-    .LessNotifSmall{
-        width: 561px;
-        height: 144px;
-        margin-top: 20px;
-    }
-    .SuccesNotifSmall img,
-    .LessNotifSmall img{
-        width: 96px;
-        margin-top: 20px;
-    }
-    .LessNotifSmall img{
-        width: 88px;
-    }
-    .SuccesNotifSmall span,
-    .LessNotifSmall span{
-        font-size: 40px;
-        margin-left: 60px;
-    }
-    .LessNotif,
-    .SuccesNotif{
-        width: 890px;
-        height: 80px;
-        margin-left: 30px;
-        height: 160px;
-    }
-    .LessNotif img,
-    .SuccesNotif img{
-        margin-top: 25px;
-        margin-left: 30px;
-        width: 102px;
-
-    }
-    .SuccesNotif span,
-    .LessNotif span{
-        font-size: 50px;
-        margin-left: 50px;
-        margin-top: 40px;
-        width: 600px;
-    }
+  }
 }
 
+@media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
 
-@media screen and (max-device-width: 800px) and (min-device-width: 500px){
-    .SuccesNotifSmall,
-    .LessNotifSmall{
-        width: 361px;
-        height: 84px;
-    }
-    .SuccesNotifSmall img,
-    .LessNotifSmall img{
-        width: 56px;
-    }
-    .LessNotifSmall img{
-        width: 48px;
-    }
-    .SuccesNotifSmall span,
-    .LessNotifSmall span{
-        font-size: 24px;
-    }
-    .LessNotif,
-    .SuccesNotif{
-        width: 860px;
-        height: 80px;
-        margin-left: 65px;
-        height: 90px;
-    }
-    .LessNotif img,
-    .SuccesNotif img{
-        width: 62px;
-    }
-    .SuccesNotif span,
-    .LessNotif span{
-        font-size: 32px;
-        width: 600px;
-        margin-top: 25px;
-        margin-left: 20px;
-    }
-}
-
-@media screen and (max-device-width: 1300px) and (min-device-width: 800px){
-    .LessNotif,
-    .SuccesNotif{
-        width: 900px;
-        height: 80px;
-        margin-left: 45px;
-    }
+  .LessNotif,
+  .SuccesNotif {
+    width: 900px;
+    height: 80px;
+    margin-left: 45px;
+  }
 }

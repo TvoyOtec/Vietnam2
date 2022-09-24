@@ -1,177 +1,207 @@
-.hname2 a{
-    text-decoration: none;
-    color: #282828;
-    font-size: 28px;
-    transition: 0.4s;
-    font-family: 'Linux Libertine G', sans-serif;
+.hname2 a {
+  text-decoration: none;
+  color: #282828;
+  font-size: 28px;
+  transition: 0.4s;
+  font-family: 'Linux Libertine G', sans-serif;
 }
+
 .hname2 a:hover {
-    color: rgb(212, 197, 63);
-    transition: 0.4s;
+  color: rgb(212, 197, 63);
+  transition: 0.4s;
 }
-.hname2{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 74px;
-    margin-top: 47px;
+
+.hname2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+  margin-top: 47px;
 }
-header{
-    height: 102%;
-    width: 90px;
-    background: #FFFFFF;
-    position: fixed;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
-    z-index: 10;
+
+header {
+  height: 102%;
+  width: 90px;
+  background: #FFFFFF;
+  position: fixed;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.103);
+  z-index: 10;
 }
-.menu{
-    width: 46px;
-    height: 217px;
-    padding: 0;
-    margin-left: 23px;
-    margin-top: 300px;
+
+.menu {
+  width: 46px;
+  height: 217px;
+  padding: 0;
+  margin-left: 23px;
+  margin-top: 300px;
 }
-.menu li{
-    margin-bottom: 41px;
-    width: 50px;
-    height: 50px;
-    transition: 0.4s;
-    border-radius: 5px;
+
+.menu li {
+  margin-bottom: 41px;
+  width: 50px;
+  height: 50px;
+  transition: 0.4s;
+  border-radius: 5px;
 }
-.menu img{
-    width: 46px;
-    height: 46px;
-    transition: 0.4s;
-    padding-left: 2px;
-    padding-top: 2px;
+
+.menu img {
+  width: 46px;
+  height: 46px;
+  transition: 0.4s;
+  padding-left: 2px;
+  padding-top: 2px;
 }
-.menu li:hover{
-    transition: 0.4s;
+
+.menu li:hover {
+  transition: 0.4s;
 }
-.menu li:hover img{
-    filter: invert(100%);
-    width: 40px;
-    height: 40px;
-    transition: 0.4s;
-    padding-left: 5px;
-    padding-top: 5px;
+
+.menu li:hover img {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+  width: 40px;
+  height: 40px;
+  transition: 0.4s;
+  padding-left: 5px;
+  padding-top: 5px;
 }
-.CMButton:hover{
-    box-shadow: 0 0 20px rgb(13, 162, 199);
-    background: rgb(13, 162, 199);
+
+.CMButton:hover {
+  box-shadow: 0 0 20px rgb(13, 162, 199);
+  background: rgb(13, 162, 199);
 }
-.CalculateButton:hover{
-    box-shadow: 0 0 20px rgb(24, 185, 18);
-    background: rgb(24, 185, 18);
+
+.CalculateButton:hover {
+  box-shadow: 0 0 20px rgb(24, 185, 18);
+  background: rgb(24, 185, 18);
 }
-.ChinaButton:hover{
-    box-shadow: 0 0 20px rgb(177, 78, 78);
-    background: rgb(180, 89, 89);
+
+.ChinaButton:hover {
+  box-shadow: 0 0 20px rgb(177, 78, 78);
+  background: rgb(180, 89, 89);
 }
-.butUpA{
-    display: block;
-    width: 56px;
-    height: 46px;
-    border-radius: 50%;
-    margin-left: 18px;
-    margin-top: 200px;
-    cursor: pointer;
+
+.butUpA {
+  display: block;
+  width: 56px;
+  height: 46px;
+  border-radius: 50%;
+  margin-left: 18px;
+  margin-top: 200px;
+  cursor: pointer;
 }
-.butUpA:hover 
-.butUp::before, 
-.butUpA:hover 
-.butUp::after{
-    filter: invert(70%);
-    transition: 0.4s;
+
+.butUpA:hover .butUp::before,
+.butUpA:hover .butUp::after {
+  -webkit-filter: invert(70%);
+  filter: invert(70%);
+  transition: 0.4s;
 }
+
 .butUp::before,
-.butUp::after{
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 20px;
-    background: black;
-    transition: 0.4s;
+.butUp::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: black;
+  transition: 0.4s;
 }
-.butUp::before{
-    transform: rotate(45deg);
-    left: 35px;
+
+.butUp::before {
+  transform: rotate(45deg);
+  left: 35px;
 }
-.butUp::after{
-    transform: rotate(-45deg);
-    left: 49px;
+
+.butUp::after {
+  transform: rotate(-45deg);
+  left: 49px;
 }
-#headerMobileOnly{
+
+#headerMobileOnly {
+  display: none;
+}
+
+@media screen and (max-device-width: 500px) {
+  header {
+    height: 160px;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.253);
+  }
+
+  .menu {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hname2 {
     display: none;
+  }
+
+  .menu img {
+    margin: 0;
+    width: 76px;
+    height: 76px;
+  }
+
+  .butUpA {
+    margin: 0;
+  }
+
+  .menu li {
+    display: inline-block;
+    width: 19.6%;
+    height: 100%;
+  }
+
+  .menu a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #headerMobileOnly {
+    display: inline-block;
+  }
+
+  .menu li:hover img {
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
+    margin: 0;
+    width: 76px;
+    height: 76px;
+    padding: 0;
+  }
+
+  .ChinaButton:hover,
+  .CalculateButton:hover,
+  .CMButton:hover {
+    box-shadow: inherit;
+    background: inherit;
+  }
 }
 
-@media screen and (max-device-width: 500px){
-    header{
-        height: 160px;
-        width: 100%;
-        bottom: 0;
-        box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.253);
-    }
-    .menu{
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .hname2{
-        display: none;
-    }
-    .menu img{
-        margin: 0;
-        width: 76px;
-        height: 76px;
-    }
-    .butUpA{
-        margin: 0;
-    }
-    .menu li{
-        display: inline-block;
-        width: 19.6%;
-        height: 100%;
-    }
-    .menu a{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    #headerMobileOnly{
-        display: inline-block;
-    }
-    .menu li:hover img{
-        filter: invert(70%);
-        margin: 0;
-        width: 76px;
-        height: 76px;
-        padding: 0;
-    }
-    .ChinaButton:hover,
-    .CalculateButton:hover,
-    .CMButton:hover{
-        box-shadow: inherit;
-        background: inherit;
-    }
+@media screen and (max-device-width: 800px) and (min-device-width: 500px) {
+  .butUpA {
+    margin-top: 350px;
+  }
+
+  .menu {
+    margin-top: 400px;
+  }
+
+  .hname2 a {
+    font-size: 37px;
+  }
 }
 
-@media screen and (max-device-width: 800px) and (min-device-width: 500px){
-    .butUpA{
-        margin-top: 350px;
-    }
-    .menu{
-        margin-top: 400px;
-    }
-    .hname2 a{
-        font-size: 37px;
-    }
-}
-@media screen and (max-device-width: 1300px) and (min-device-width: 800px){
-    .butUpA{
-        margin-top: 180px;
-    }
+@media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
+  .butUpA {
+    margin-top: 180px;
+  }
 }

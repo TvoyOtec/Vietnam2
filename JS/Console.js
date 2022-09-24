@@ -5,7 +5,23 @@ const SpanNotifyCommand = document.querySelector('#SpanNotify')
 const ButtonMobile = document.querySelector('.mobileBut')
 const console = document.querySelector('.console')
 let Count = 1;
-let darkmode = false;
+let darkmode = localStorage.getItem("darkmode")
+
+function DarkmodeEnable(){
+    localStorage.setItem("darkmode", darkmode)
+    if(darkmode == 1){
+        console.style.background = "rgb(65, 65, 65)"
+        inputConsole.style.color = "white";
+    } 
+    // else if(darkmode || 0 === darkmode.length){
+    //     localStorage.setItem("darkmode", false)
+    // }
+    else if (darkmode == 2){
+        console.style.background = "white";
+        inputConsole.style.color = "black";
+    } 
+
+}
 
 function successCommand(f){
     SpanNotifyCommand.innerHTML = f;
@@ -27,7 +43,7 @@ function OutpCommand(name){
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`)
     OutputConsolep.innerHTML = `-${name}`;
     OutputConsolep.className = 'outputConsole';
-    if(darkmode){
+    if(darkmode == true){
             OutputConsolep.style.color = 'rgb(250, 71, 71)';
     } else {
         OutputConsolep.style.color = 'rgb(126, 25, 25)';
@@ -42,7 +58,7 @@ function YourCommandWriter(){
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`);
     OutputConsolep.className = 'outputConsole';
     OutputConsolep.innerHTML = `-${inputConsole.value}`;
-    if(darkmode){
+    if(darkmode == true){
         OutputConsolep.style.color = 'rgb(114, 197, 107)';
     } else {
         OutputConsolep.style.color = 'rgb(52, 121, 25)';
@@ -58,16 +74,6 @@ function AddCoins(many){
 function AddPayDay(many){
     localStorage.setItem("yantick", many)
     OutputConsole.scrollTo(0, Count * 100)
-}
-
-function DarkMode(){
-    darkmode = true
-    console.style.background = "rgb(65, 65, 65)"
-}
-
-function LightMode(){
-    darkmode = false
-    console.style.background = "white"
 }
 
 function Main(e){
@@ -102,19 +108,22 @@ function Main(e){
             OutpCommand("darkmode");
             OutpCommand("lightmode");
         }else if(inputConsole.value == "darkmode"){
-            DarkMode()
+            darkmode = 1
+            localStorage.setItem("darkmode", 1)
+            DarkmodeEnable()
             successCommand(`Включена темная тема`)
         }else if(inputConsole.value == "lightmode"){
-            LightMode()
+            darkmode = 2
+            localStorage.setItem("darkmode", 2)
+            DarkmodeEnable()
             successCommand(`Включена светлая тема`)
         }else {
             OutpCommand("Unknown command");
  
         inputConsole.value = "";
     };
-
+    
 }
-
 inputConsole.addEventListener('keyup', function(e){
     if(e.code == "Enter" || e.keycode == "39" || e.keycode == "13"){
         Main(e)
@@ -125,3 +134,5 @@ ButtonMobile.addEventListener('click', function(e){
     Main(e)
     inputConsole.value = "";
 })
+DarkmodeEnable()
+setInterval("DarkmodeEnable()", 100)
