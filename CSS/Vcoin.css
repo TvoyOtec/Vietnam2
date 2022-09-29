@@ -2,306 +2,345 @@
 @import url("Notification.css");
 
 main {
-  margin: 0;
+    margin: 0;
 }
 
 body {
-  touch-action: manipulation;
+    touch-action: manipulation;
 }
 
 .socialName {
-  color: red;
+    color: red;
 }
 
 .top {
-  display: flex;
-  justify-content: center;
-  margin-top: 29px;
-  width: 100%;
-  margin-left: 90px;
-  height: 250px;
+    display: flex;
+    justify-content: center;
+    margin-top: 29px;
+    width: 100%;
+    margin-left: 90px;
+    height: 250px;
 }
 
 .top li {
-  padding: 0%;
+    padding: 0%;
 }
 
 .info {
-  margin-left: -6%;
-  margin-top: 60px;
-  width: 875px;
-  height: 87px;
-  background: #ffff;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.253);
-  border-radius: 14px;
+    margin-left: -6%;
+    margin-top: 60px;
+    width: 875px;
+    height: 87px;
+    background: #ffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.253);
+    border-radius: 14px;
 }
 
 .YanInfo,
 .CreditInfo {
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  height: 100%;
-  font-size: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    font-size: 20px;
 }
 
 .CreditInfo {
-  width: 481px;
+    width: 481px;
 }
 
 .YanInfo {
-  float: right;
-  width: 294px;
-  margin-top: -87px;
+    float: right;
+    width: 294px;
+    margin-top: -87px;
 }
 
 .socCredit,
 .Yan {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .middle {
-  margin-left: 50px;
-  display: flex;
-  height: 600px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+    margin-left: 50px;
+    display: flex;
+    height: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .taiwanBut {
-  width: 420px;
-  height: 261px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  border-radius: 30px;
+    width: 420px;
+    height: 261px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 30px;
 }
 
 .taiwanBut:hover {
-  cursor: pointer;
-  border: 2px solid rgb(14, 122, 172);
-  -webkit-filter: brightness(0.5);
-  filter: brightness(0.5);
+    cursor: pointer;
+    border: 2px solid rgb(14, 122, 172);
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
 }
 
 .bottom {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-left: 60px;
-  width: 100%;
-  height: 1300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    width: 100%;
+    height: 1300px;
 }
 
 .bonusInfo {
-  font-size: 26px;
-  font-family: 'Syncopate', sans-serif;
+    font-size: 26px;
+    font-family: 'Syncopate', sans-serif;
 }
 
 .bonusInfo::before {
-  content: '';
-  width: 100px;
-  height: 2px;
-  background: black;
-  position: absolute;
-  margin-top: 50px;
-  margin-left: 50px;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 .bonusInfoPlace {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-left: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
 }
 
 .li {
-  padding: 0;
-  width: 533px;
-  height: 109px;
-  border-radius: 35px;
-  background: white;
-  margin-top: 30px;
-  margin-bottom: 60px;
-  box-shadow: 5px 3px 5px rgba(182, 181, 181, 0.527);
-  transition: 0.4s;
-  overflow: hidden;
+    padding: 0;
+    width: 433px;
+    height: 100px;
+    border-radius: 25px;
+    background: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border: 2px solid rgba(172, 171, 171, 0.247);
+    transition: 0.4s;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
 }
 
 .liA {
-  text-decoration: none;
+    overflow: hidden;
+    text-decoration: none;
 }
 
 .YanPLus {
-  color: rgba(88, 142, 0, 0.60);
-  font-size: 24px;
-  width: 90px;
-  height: 20px;
-  margin: 0;
-  margin-left: 144px;
-  margin-top: -48px;
+    color: rgba(88, 142, 0, 0.60);
+    font-size: 24px;
+    width: 90px;
+    height: 20px;
+    margin: 0;
+    margin-left: 44px;
+    margin-top: -48px;
 }
 
 .socMinus {
-  margin: 0;
-  float: right;
-  color: #FF0000;
-  margin-right: 50px;
-  margin-top: 10px;
+    margin: 0;
+    float: right;
+    color: #FF0000;
+    margin-right: 50px;
+    margin-top: 10px;
 }
 
 .liIMG {
-  width: 56px;
-  height: 55px;
-  margin-top: 23px;
-  margin-left: 17px;
+    visibility: hidden;
+    width: 56px;
+    height: 55px;
+    margin-top: 23px;
+    margin-left: 7px;
 }
 
 .liA:hover li {
-  transform: translateX(-30px);
-  transition: 0.4s;
+    border-color: rgba(110, 110, 110, 0.356);
+    transition: 0.4s;
+    filter: brightness(0.93);
+    -webkit-filter: brightness(0.93);
 }
 
 main {
-  height: 3500px;
+    height: 3500px;
+}
+
+/* .ripple {
+    position: absolute;
+    background: rgb(161, 161, 161);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    animation: rippleeffect 1s linear infinite;
+    -webkit-animation: rippleeffect 1s linear infinite;
+    border-radius: 50%;
+    pointer-events: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} */
+
+@keyframes rippleeffect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.7;
+    }
+
+    90% {
+        width: 700px;
+        opacity: 0;
+        height: 700px;
+    }
 }
 
 @media screen and (max-device-width: 500px) {
-  .top {
-    margin: 10px;
-    height: 700px;
-  }
+    .top {
+        margin: 10px;
+        height: 700px;
+    }
 
-  .top h3 {
-    font-size: 50px;
-    text-align: center;
-  }
+    .top h3 {
+        font-size: 50px;
+        text-align: center;
+    }
 
-  .info {
-    margin-left: 5px;
-    width: 950px;
-    height: 350px;
-  }
+    .info {
+        margin-left: 5px;
+        width: 950px;
+        height: 350px;
+    }
 
-  .YanInfo,
-  .CreditInfo {
-    font-size: 55px;
-    width: 900px;
-    height: 150px;
-  }
+    .YanInfo,
+    .CreditInfo {
+        font-size: 55px;
+        width: 900px;
+        height: 150px;
+    }
 
-  .YanInfo {
-    margin-top: 20px;
-    float: none;
-  }
+    .YanInfo {
+        margin-top: 20px;
+        float: none;
+    }
 
-  .taiwanBut {
-    width: 720px;
-    height: 461px;
-  }
+    .taiwanBut {
+        width: 720px;
+        height: 461px;
+    }
 
-  .middle {
-    margin-left: 20px;
-    margin-top: 140px;
-  }
+    .middle {
+        margin-left: 20px;
+        margin-top: 140px;
+    }
 
-  .bonusInfo {
-    font-size: 60px;
-  }
+    .bonusInfo {
+        font-size: 60px;
+    }
 
-  .bonusInfo::before {
-    margin-top: 100px;
-    height: 5px;
-    width: 300px;
-    margin-left: 75px;
-  }
+    .bonusInfo::before {
+        margin-top: 100px;
+        height: 5px;
+        width: 300px;
+        margin-left: 75px;
+    }
 
-  .bonusInfoPlace {
-    margin-top: 140px;
-    margin-left: 35px;
-  }
+    .bonusInfoPlace {
+        margin-top: 140px;
+        margin-left: 35px;
+    }
 
-  .li {
-    width: 900px;
-    height: 200px;
-  }
+    .li {
+        width: 900px;
+        height: 200px;
+    }
 
-  .bottom {
-    margin-left: 10px;
-  }
+    .bottom {
+        margin-left: 10px;
+    }
 
-  .YanPLus {
-    height: 100px;
-    width: 200px;
-    font-size: 65px;
-    margin-top: -80px;
-  }
+    .YanPLus {
+        height: 100px;
+        width: 200px;
+        font-size: 65px;
+        margin-top: -80px;
+    }
 
-  .liIMG {
-    margin-top: 55px;
-    margin-left: 20px;
-    width: 86px;
-    height: 85px;
-  }
+    .liIMG {
+        margin-top: 55px;
+        margin-left: 20px;
+        width: 86px;
+        height: 85px;
+    }
 
-  .socMinus {
-    font-size: 42px;
-    margin-top: -50px;
-  }
+    .socMinus {
+        font-size: 42px;
+        margin-top: -50px;
+    }
 
-  main {
-    height: 8000px;
-  }
+    main {
+        height: 8000px;
+    }
 
-  ul {
-    padding: 0;
-    margin: 0;
-  }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media screen and (max-device-width: 800px) and (min-device-width: 500px) {
-  .top h3 {
-    font-size: 26px;
-  }
+    .top h3 {
+        font-size: 26px;
+    }
 
-  .YanInfo,
-  .CreditInfo {
-    font-size: 26px;
-  }
+    .YanInfo,
+    .CreditInfo {
+        font-size: 26px;
+    }
 
-  .bonusInfo {
-    font-size: 36px;
-    margin-top: 100px;
-  }
+    .bonusInfo {
+        font-size: 36px;
+        margin-top: 100px;
+    }
 
-  .bonusInfo::before {
-    margin-left: 62px;
-    width: 150px;
-  }
+    .bonusInfo::before {
+        margin-left: 62px;
+        width: 150px;
+    }
 
-  .li {
-    width: 653px;
-    height: 129px;
-  }
+    .li {
+        width: 653px;
+        height: 129px;
+    }
 
-  .YanPLus {
-    margin-top: -55px;
-    font-size: 32px;
-  }
+    .YanPLus {
+        margin-top: -55px;
+        font-size: 32px;
+    }
 
-  .socMinus {
-    font-size: 24px;
-  }
+    .socMinus {
+        font-size: 24px;
+    }
 
-  .liIMG {
-    width: 66px;
-    height: 65px;
-    margin-top: 32px;
-  }
+    .liIMG {
+        width: 66px;
+        height: 65px;
+        margin-top: 32px;
+    }
 
-  main {
-    height: 5500px;
-  }
+    main {
+        height: 5500px;
+    }
 }

@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>  
+
+<head>
     <meta charset="UTF-8">
-    <link href="CSS/all.css" rel="stylesheet" type="text/css"/>
-    <link href="CSS/Console.css" rel="stylesheet" type="text/css"/>
-    <link rel="shortcut icon" href="" type="image/png">
+    <link href="CSS/all.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/Console.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="IMAGE/logo.png" type="image/png">
     <title>Vietnam 2.0</title>
-</head>  
+</head>
+
 <body>
-<!-- preloader -->
+    <!-- preloader -->
     <div class="preloader">
         <svg class="progBarPos" width="240" height="240">
-            <circle class="proBarCircle" stroke="white" stroke-width="6" cx="120" cy="120" r="108" fill="transparent"/>
+            <circle class="proBarCircle" stroke="white" stroke-width="6" cx="120" cy="120" r="108" fill="transparent" />
         </svg>
     </div>
-<!-- header -->
-<header>
-    <div class="hname2"><a href="index.html"><h2>V</h2></a></div>
-    <ul class="menu">
-        <li type="none" id="headerMobileOnly"><a href="index.html"><img src="IMAGE/home2.png" alt=""></a></li>
-        <li type="none" class="CMButton"><a href="Console.html"><img src="IMAGE\command-line.png" alt=""></a></li>
-        <li type="none" class="CalculateButton"><a href="Calc.html" class="calcIco"><img src="IMAGE\calculator.png" alt=""></a></li>
-        <li type="none" class="ChinaButton"><a href="Coins.html"><img src="IMAGE\chinaIco.png" alt=""></a></li>
-        <li type="none" id="headerMobileOnly"><a href="#"><img src="IMAGE/upper.png" alt=""></a></li>
-    </ul>
-    <a href="#" class="butUpA"><span class="butUp"></span></a>
-</header>
-<!-- main --> 
+    <!-- header -->
+    <header>
+        <div class="hname2"><a href="index.html">
+                <h2>V</h2>
+            </a></div>
+        <ul class="menu">
+            <li type="none" id="headerMobileOnly"><a href="index.html"><img src="IMAGE/home2.png" alt=""></a></li>
+            <li type="none" class="CMButton"><a href="Console.html"><img src="IMAGE\command-line.png" alt=""></a></li>
+            <li type="none" class="CalculateButton"><a href="Calc.html" class="calcIco"><img src="IMAGE\calculator.png"
+                        alt=""></a></li>
+            <li type="none" class="ChinaButton"><a href="Coins.html"><img src="IMAGE\chinaIco.png" alt=""></a></li>
+            <li type="none" id="headerMobileOnly"><a href="#"><img src="IMAGE/upper.png" alt=""></a></li>
+        </ul>
+        <a href="#" class="butUpA"><span class="butUp"></span></a>
+    </header>
+    <!-- main -->
     <main>
         <div class="mainEbat">
             <div class="SuccesNotif"><img src="IMAGE\check.png" alt=""><span id="SpanNotify"></span></div>
             <div class="console">
-                <div class="viewConsole"><p class="outputConsole" id="OutputConsole0"></p></div>
-                <div class="inputConsole"><input type="search" id ="InputConsole" placeholder="Введите команду"></div>
+                <div class="viewConsole">
+                    <p class="outputConsole" id="OutputConsole0"></p>
+                </div>
+                <div class="inputConsole"><input type="search" id="InputConsole" placeholder="Введите команду"></div>
             </div>
             <span class="mobileBut">Send</span>
         </div>
@@ -41,4 +48,5 @@
     <script src="JS/preloader.js"></script>
     <script src="JS/Console.js"></script>
 </body>
+
 </html>

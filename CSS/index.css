@@ -3,105 +3,102 @@
 @import url("header.css");
 
 .services {
-  position: relative;
-  display: block;
-  background: inherit;
-  width: 100%;
-  height: 820px;
-  margin-top: 100px;
-  border-radius: 5%;
+    position: relative;
+    display: block;
+    background: inherit;
+    width: 100%;
+    height: 820px;
+    margin-top: 100px;
+    border-radius: 5%;
 }
 
 .Elem {
-  color: black;
-  width: 100%;
-  height: 100%;
+    color: black;
+    width: 100%;
+    height: 100%;
 }
 
 .ServiceElem:hover {
-  box-shadow: 0 0 20px rgb(0, 0, 0);
-  transition: 0.5s;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    transition: 0.5s;
 }
 
 .ServiceElem:hover .Shtora {
-  background: rgba(0, 0, 0, 0.568);
-  transition: 0.5s;
-  color: white;
+    background: rgba(0, 0, 0, 0.568);
+    transition: 0.5s;
+    color: white;
 }
 
 .ServiceElem {
-  text-decoration: none;
-  width: 578px;
-  height: 300px;
-  margin: 10px;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 2%;
-  box-shadow: 0 0 5px black;
-  transition: 0.5s;
-  margin-top: 70px;
+    text-decoration: none;
+    width: clamp(400px, 47.5%, 578px);
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 2%;
+    box-shadow: 0 0 5px black;
+    transition: 0.5s;
+    margin-top: 70px;
 }
 
 .Shtora {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.788);
-  z-index: 1;
-  transition: 0.5s;
-  color: rgba(255, 255, 255, 0.788);
-  font-family: 'Righteous', cursive;
-  text-transform: uppercase;
-  font-size: 20px;
-  text-align: center;
-  justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.788);
+    z-index: 1;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.788);
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
 }
 
 .Shtora h2 {
-  margin-top: 120px;
+    margin-top: 120px;
 }
 
 .services a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-
 @media screen and (max-device-width: 500px) {
-  .ServiceElem {
-    width: 98%;
-    height: 500px;
-  }
+    .ServiceElem {
+        width: 98%;
+        height: 500px;
+    }
 
-  .Shtora h2 {
-    margin-top: 210px;
-    font-size: 50px;
-    color: white;
-  }
+    .Shtora h2 {
+        margin-top: 210px;
+        font-size: 50px;
+        color: white;
+    }
 
-  .mainEbat {
-    width: 1000px;
-  }
+    .mainEbat {
+        width: 1000px;
+    }
 }
 
 @media screen and (max-device-width: 800px) and (min-device-width: 500px) {
-  .ServiceElem {
-    width: 428px;
-    height: 250px;
-  }
+    .ServiceElem {
+        height: 250px;
+    }
 
-  .Shtora h2 {
-    margin-top: 100px;
-  }
+    .Shtora h2 {
+        margin-top: 100px;
+    }
 }
 
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
-  .ServiceElem {
-    width: 428px;
-    height: 250px;
-  }
+    .ServiceElem {
+        height: 250px;
+    }
 
-  .Shtora h2 {
-    margin-top: 100px;
-  }
+    .Shtora h2 {
+        margin-top: 100px;
+    }
 }
