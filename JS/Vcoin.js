@@ -14,7 +14,12 @@ const oneCost = 1000;
 while (kolvo < 31) {
     socrat = yanBuy * oneCost;
     let li = document.createElement('a');
-    li.innerHTML = `<li class="li" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLus">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`;
+    let themes = localStorage.getItem('darkmode')
+    if (themes == 1) {
+        li.innerHTML = `<li class="liBlack" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLusBlack">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`;
+    } else {
+        li.innerHTML = `<li class="li" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLus">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`;
+    }
     li.className = 'liA';
     li.setAttribute("href", "#li");
     li.setAttribute("id", `${kolvo}`);

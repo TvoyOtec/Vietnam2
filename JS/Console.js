@@ -4,21 +4,8 @@ const SuccessNotifyCommand = document.querySelector('.SuccesNotif');
 const SpanNotifyCommand = document.querySelector('#SpanNotify')
 const ButtonMobile = document.querySelector('.mobileBut')
 const console = document.querySelector('.console')
-let Count = 1;
 let darkmode = localStorage.getItem("darkmode")
-
-function DarkmodeEnable() {
-    localStorage.setItem("darkmode", darkmode)
-    if (darkmode == 1) {
-        console.style.background = "rgb(65, 65, 65)"
-        inputConsole.style.color = "white";
-    }
-    else if (darkmode == 2) {
-        console.style.background = "white";
-        inputConsole.style.color = "black";
-    }
-
-}
+let Count = 1;
 
 function successCommand(f) {
     SpanNotifyCommand.innerHTML = f;
@@ -38,7 +25,7 @@ function OutpCommand(name) {
     const OutputConsolep = document.createElement('p')
     Count++;
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`)
-    OutputConsolep.innerHTML = `-${name}`;
+    OutputConsolep.innerHTML = `- ${name}`;
     OutputConsolep.className = 'outputConsole';
     OutputConsolep.style.color = 'rgb(250, 71, 71)';
     OutputConsole.append(OutputConsolep);
@@ -50,7 +37,7 @@ function YourCommandWriter() {
     Count++;
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`);
     OutputConsolep.className = 'outputConsole';
-    OutputConsolep.innerHTML = `-${inputConsole.value}`;
+    OutputConsolep.innerHTML = `- ${inputConsole.value}`;
     OutputConsolep.style.color = 'rgb(114, 197, 107)';
     OutputConsole.append(OutputConsolep);
 }
@@ -90,22 +77,20 @@ function Main(e) {
         buttonOff()
         successCommand(`Кнопка выключена`)
     } else if (inputConsole.value == "help") {
-        OutpCommand("changepayday");
-        OutpCommand("changecoins");
-        OutpCommand("buttonoff");
-        OutpCommand("buttonon");
-        OutpCommand("darkmode");
-        OutpCommand("lightmode");
-    } else if (inputConsole.value == "darkmode") {
+        OutpCommand(" 1: changepayday");
+        OutpCommand(" 2: changecoins");
+        OutpCommand(" 3: buttonoff");
+        OutpCommand(" 4: buttonon");
+        OutpCommand(" 5: darkmode or dark or darktheme");
+        OutpCommand(" 6: lightmode or whitetheme or lighttheme or whitemode or white or light");
+    } else if (inputConsole.value == "darkmode" || inputConsole.value == "dark" || inputConsole.value == "darktheme") {
         darkmode = 1
         localStorage.setItem("darkmode", 1)
-        DarkmodeEnable()
-        successCommand(`Включена темная тема`)
-    } else if (inputConsole.value == "lightmode") {
+        successCommand(`Включена темная тема. Обновите страницу`)
+    } else if (inputConsole.value == "lightmode" || inputConsole.value == "light" || inputConsole.value == "white" || inputConsole.value == "whitemode" || inputConsole.value == "lighttheme" || inputConsole.value == "whitetheme") {
         darkmode = 2
         localStorage.setItem("darkmode", 2)
-        DarkmodeEnable()
-        successCommand(`Включена светлая тема`)
+        successCommand(`Включена светлая тема. Обновите страницу`)
     } else {
         OutpCommand("Unknown command");
         inputConsole.value = "";
@@ -122,5 +107,3 @@ ButtonMobile.addEventListener('click', function (e) {
     Main(e)
     inputConsole.value = "";
 })
-DarkmodeEnable()
-setInterval("DarkmodeEnable()", 100)

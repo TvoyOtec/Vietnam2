@@ -1,77 +1,78 @@
 .slider {
-  background: inherit;
-  background-repeat: no-repeat;
-  transition: 0.5s;
-  z-index: -2;
-  border-radius: 10px;
-  background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.411);
+    background: inherit;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    z-index: -2;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.411);
 }
 
 .SliderPos {
-  display: flex;
-  width: 100%;
-  height: 600px;
+    display: flex;
+    width: 100%;
+    height: 600px;
 }
 
 .SliPanel {
-  position: relative;
-  justify-content: center;
-  display: flex;
-  width: 100%;
-  height: 50px;
-  align-items: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
 }
 
 .SliCirc {
-  cursor: pointer;
-  width: 40px;
-  height: 5px;
-  margin-left: 12px;
-  border-radius: 15%;
-  transition: 0.5s;
+    cursor: pointer;
+    width: 40px;
+    height: 5px;
+    margin-left: 12px;
+    border-radius: 15%;
+    transition: 0.5s;
 }
 
 .SliCirc:hover {
-  box-shadow: 0 0 10px white;
-  transition: 0.5s;
+    box-shadow: 0 0 10px white;
+    transition: 0.5s;
 }
 
+
 @media screen and (max-device-width: 500px) {
-  .SliCirc {
-    height: 25px;
-    width: 90px;
-    margin-left: 50px;
-  }
+    .SliCirc {
+        height: 25px;
+        width: 90px;
+        margin-left: 50px;
+    }
 
-  .SliPanel {
-    margin-top: 60px;
-  }
+    .SliPanel {
+        margin-top: 60px;
+    }
 
-  .SliderPos {
-    height: 700px;
-  }
+    .SliderPos {
+        height: 700px;
+    }
 }
 
 @media screen and (max-device-width: 800px) and (min-device-width: 500px) {
-  .SliCirc {
-    height: 10px;
-    width: 50px;
-    margin-left: 50px;
-  }
+    .SliCirc {
+        height: 10px;
+        width: 50px;
+        margin-left: 50px;
+    }
 
-  .SliPanel {
-    margin-top: 20px;
-  }
+    .SliPanel {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
-  .SliderPos {
-    height: 500px;
-  }
+    .SliderPos {
+        height: 500px;
+    }
 }

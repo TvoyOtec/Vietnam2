@@ -4,6 +4,19 @@
   ],
   "hints": {
     "css-prefix-order": "off",
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "axe/forms": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
+    ]
   }
 }

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <!-- preloader -->
     <div class="preloader">
         <svg class="progBarPos" width="240" height="240">
@@ -17,17 +18,21 @@
         </svg>
     </div>
     <!-- header -->
-    <header>
-        <div class="hname2"><a href="index.html">
+    <header class="header2">
+        <div class="hname2"><a class="hname_a2 hname_a" href="index.html">
                 <h2>V</h2>
             </a></div>
         <ul class="menu">
-            <li type="none" id="headerMobileOnly"><a href="index.html"><img src="IMAGE/home2.png" alt=""></a></li>
-            <li type="none" class="CMButton"><a href="Console.html"><img src="IMAGE\command-line.png" alt=""></a></li>
-            <li type="none" class="CalculateButton"><a href="Calc.html" class="calcIco"><img src="IMAGE\calculator.png"
+            <li type="none" id="headerMobileOnly"><a href="index.html"><img id="headerIMG" src="IMAGE/home2.png"
                         alt=""></a></li>
-            <li type="none" class="ChinaButton"><a href="Coins.html"><img src="IMAGE\chinaIco.png" alt=""></a></li>
-            <li type="none" id="headerMobileOnly"><a href="#"><img src="IMAGE/upper.png" alt=""></a></li>
+            <li type="none" class="CMButton CMButtonACtive"><a href="Console.html"><img id="headerIMG"
+                        src="IMAGE\command-line.png" alt=""></a></li>
+            <li type="none" class="CalculateButton"><a href="Calc.html" class="calcIco"><img id="headerIMG"
+                        src="IMAGE\calculator.png" alt=""></a></li>
+            <li type="none" class="ChinaButton"><a href="Coins.html"><img id="headerIMG" src="IMAGE\chinaIco.png"
+                        alt=""></a></li>
+            <li type="none" id="headerMobileOnly"><a href="#"><img id="headerIMG" src="IMAGE/upper.png" alt=""></a>
+            </li>
         </ul>
         <a href="#" class="butUpA"><span class="butUp"></span></a>
     </header>
@@ -44,9 +49,10 @@
             <span class="mobileBut">Send</span>
         </div>
     </main>
-
-    <script src="JS/preloader.js"></script>
-    <script src="JS/Console.js"></script>
+    <script src="JS/themechecker.js" type="text/javascript"></script>
+    <script src="JS/preloader.js" type="text/javascript"></script>
+    <script src="JS/Console.js" type="text/javascript"></script>
+    <script type="text/javascript">ThemeChecker3()</script>
 </body>
 
 </html>
