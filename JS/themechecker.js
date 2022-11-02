@@ -55,4 +55,10 @@ function ThemeChecker4() {
     };
 
 };
+function ThemeChecker5() {
+    if (theme == 1) {
+        HeadersChanger()
+    };
+
+};
 

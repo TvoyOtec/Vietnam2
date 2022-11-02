@@ -34,7 +34,7 @@
     height: 217px;
     padding: 0;
     margin-left: 23px;
-    margin-top: 300px;
+    margin-top: 250px;
 }
 
 .menu li {
@@ -60,7 +60,8 @@
 .menu li:hover #headerIMG,
 .CMButtonACtive #headerIMG,
 .CalculateButtonActive #headerIMG,
-.ChinaButtonActive #headerIMG {
+.ChinaButtonActive #headerIMG,
+.SetButtonActive #headerIMG {
     -webkit-filter: invert(100%);
     filter: invert(100%);
     width: 40px;
@@ -71,11 +72,11 @@
     transition: 0.4s;
 }
 
-.headImgBlack {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+.SetButton:hover,
+.SetButtonActive {
+    box-shadow: 0 0 20px rgb(223, 201, 5);
+    background: rgb(223, 201, 5);
 }
-
 
 .CMButton:hover,
 .CMButtonACtive {
@@ -101,7 +102,7 @@
     height: 46px;
     border-radius: 50%;
     margin-left: 18px;
-    margin-top: 200px;
+    margin-top: 300px;
     cursor: pointer;
 }
 
@@ -124,12 +125,12 @@
 
 .butUp::before {
     transform: rotate(45deg);
-    left: 35px;
+    left: 40px;
 }
 
 .butUp::after {
     transform: rotate(-45deg);
-    left: 49px;
+    left: 54px;
 }
 
 #headerMobileOnly {
@@ -199,20 +200,14 @@
     .menu li:hover #headerIMG,
     .CMButtonACtive #headerIMG,
     .CalculateButtonActive #headerIMG,
-    .ChinaButtonActive #headerIMG {
-        -webkit-filter: invert(70%);
-        filter: invert(70%);
+    .ChinaButtonActive #headerIMG,
+    .SetButtonActive #headerIMG {
+        filter: invert(100%);
         margin: 0;
         width: 76px;
         height: 76px;
         padding: 0;
-    }
-
-    .ChinaButton:hover,
-    .CalculateButton:hover,
-    .CMButton:hover {
-        box-shadow: inherit;
-        background: inherit;
+        -webkit-filter: invert(100%);
     }
 }
 
