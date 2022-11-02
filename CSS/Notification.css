@@ -97,14 +97,13 @@
     .LessNotif,
     .SuccesNotif {
         width: 890px;
-        height: 80px;
         margin-left: 30px;
-        height: 160px;
+        height: 260px;
     }
 
     .LessNotif img,
     .SuccesNotif img {
-        margin-top: 25px;
+        margin-top: 65px;
         margin-left: 30px;
         width: 102px;
 
@@ -114,7 +113,7 @@
     .LessNotif span {
         font-size: 50px;
         margin-left: 50px;
-        margin-top: 40px;
+        margin-top: 45px;
     }
 }
 

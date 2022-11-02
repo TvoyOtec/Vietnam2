@@ -101,6 +101,7 @@ body {
 
 @media screen and (max-device-width: 500px) {
     .console {
+        margin-top: 350px;
         width: 900px;
         margin-left: 25px;
         height: 1200px;
