@@ -1,17 +1,10 @@
 const inputConsole = document.querySelector('#InputConsole');
 const OutputConsole = document.querySelector('.viewConsole');
-const SuccessNotifyCommand = document.querySelector('.SuccesNotif');
-const SpanNotifyCommand = document.querySelector('#SpanNotify')
 const ButtonMobile = document.querySelector('.mobileBut')
 const console = document.querySelector('.console')
 let darkmode = localStorage.getItem("darkmode")
 let Count = 1;
 
-function successCommand(f) {
-    SpanNotifyCommand.innerHTML = f;
-    SuccessNotifyCommand.style.opacity = "1";
-    setTimeout("SuccessNotifyCommand.style.opacity = '0' ", 2000);
-}
 
 function buttonOn() {
     ButtonMobile.style.display = 'flex';
@@ -30,6 +23,7 @@ function OutpCommand(name) {
     OutputConsolep.style.color = 'rgb(250, 71, 71)';
     OutputConsole.append(OutputConsolep);
     OutputConsole.scrollTo(0, Count * 100)
+    inputConsole.value = "";
 }
 
 function YourCommandWriter() {
@@ -58,15 +52,24 @@ function Main(e) {
     let preCommandNum = huys - 2;
     let preCommand = document.getElementById(`OutputConsole${preCommandNum}`).textContent;
     if (inputConsole.value == "changecoins") {
-        OutpCommand("how many?")
-        console.log(Count, preCommand, localStorage)
-    } else if (preCommand == "-changecoins") {
+        if (localStorage.getItem("admin") == 1) {
+            OutpCommand("how many?")
+        } else {
+            OutpCommand("Woman moment");
+            inputConsole.value = "";
+        }
+    } else if (preCommand == "- changecoins" && localStorage.getItem("admin") == 1) {
         let coinSCome = parseInt(inputConsole.value);
         AddCoins(coinSCome)
         successCommand(`Social rating = ${coinSCome}`)
     } else if (inputConsole.value == "changepayday") {
-        OutpCommand("how many?")
-    } else if (preCommand == "-changepayday") {
+        if (localStorage.getItem("admin") == 1) {
+            OutpCommand("how many?")
+        } else {
+            OutpCommand("Woman moment");
+            inputConsole.value = "";
+        }
+    } else if (preCommand == "- changepayday" && localStorage.getItem("admin") == 1) {
         let PaydayCome = parseInt(inputConsole.value);
         AddPayDay(PaydayCome)
         successCommand(`Заралата теперь равна ${PaydayCome}`)
@@ -77,12 +80,14 @@ function Main(e) {
         buttonOff()
         successCommand(`Кнопка выключена`)
     } else if (inputConsole.value == "help") {
-        OutpCommand(" 1: changepayday");
-        OutpCommand(" 2: changecoins");
-        OutpCommand(" 3: buttonoff");
-        OutpCommand(" 4: buttonon");
-        OutpCommand(" 5: darkmode or dark or darktheme");
-        OutpCommand(" 6: lightmode or whitetheme or lighttheme or whitemode or white or light");
+        if (localStorage.getItem("admin") == 1) {
+            OutpCommand(" changepayday");
+            OutpCommand(" changecoins");
+        }
+        OutpCommand(" buttonoff");
+        OutpCommand(" buttonon");
+        OutpCommand(" darkmode or dark or darktheme");
+        OutpCommand(" lightmode or whitetheme or lighttheme or whitemode or white or light");
     } else if (inputConsole.value == "darkmode" || inputConsole.value == "dark" || inputConsole.value == "darktheme") {
         darkmode = 1
         localStorage.setItem("darkmode", 1)

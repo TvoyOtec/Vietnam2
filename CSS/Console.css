@@ -67,7 +67,7 @@ body {
     display: flex;
     width: 280px;
     height: 70px;
-    background: rgb(30, 142, 207);
+    background: rgb(221, 202, 33);
     margin-left: 490px;
     margin-top: 50px;
     color: white;
@@ -75,7 +75,7 @@ body {
     align-items: center;
     font-size: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgb(30, 142, 207);
+    box-shadow: 0 0 10px rgb(221, 202, 33);
     transition: 0.5s;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -86,8 +86,9 @@ body {
 }
 
 .mobileBut:hover {
-    background: rgb(15, 72, 105);
-    box-shadow: 0 0 10px rgb(13, 67, 99);
+    background: rgb(196, 179, 30);
+    box-shadow: 0 0 10px rgb(184, 168, 28);
+    color: rgb(214, 214, 214);
     transition: 0.5s;
 }
 

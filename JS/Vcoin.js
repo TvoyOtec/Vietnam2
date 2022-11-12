@@ -6,8 +6,6 @@ const list = document.querySelector('.bonusList');
 const button = document.querySelector('#taiwanBut');
 const rateinfo = document.querySelector('.socCredit');
 const yaninfo = document.querySelector('.Yan');
-const SuccessNotify = document.querySelector('.SuccesNotifSmall');
-const FailedNotify = document.querySelector('.LessNotifSmall');
 const oneCost = 1000;
 
 // boosts
@@ -60,14 +58,6 @@ button.addEventListener('click', function plus() {
 });
 
 // notification
-function success() {
-    SuccessNotify.style.opacity = "1";
-    setTimeout("SuccessNotify.style.opacity = '0' ", 2000)
-}
-function failed() {
-    FailedNotify.style.opacity = "1";
-    setTimeout("FailedNotify.style.opacity = '0' ", 2000)
-}
 
 
 // boost add script
@@ -77,10 +67,10 @@ list.addEventListener('click', e => {
         socrating = socrating - oneCost;
         yan = yan + 1;
         console.log(ids, yan)
-        success();
+        success(`Бить, бить, успех`);
     } else if (ids == 0) {
         console.log('huy', ids);
-        failed();
+        failed(`Вы разочаровали партию `);
     }
     if (ids > 0) {
         socrating = socrating - (ids * 5 * oneCost);
@@ -89,9 +79,9 @@ list.addEventListener('click', e => {
             socrating = socrating + (ids * 5 * oneCost);
             yan = yan - ids * 5;
             nea = true;
-            failed();
+            failed(`Вы разочаровали партию `);
         } else {
-            success();
+            success(`Бить, бить, успех`);
         }
     }
 })
