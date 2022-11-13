@@ -58,7 +58,9 @@ function ThemeChecker4() {
 function ThemeChecker5() {
     if (theme == 1) {
         HeadersChanger()
+        document.querySelector('.settings').style.background = 'rgb(65, 65, 65)'
+        document.querySelector('.logBut').classList.add('logButBlack')
+        document.querySelector('.inpcheck').checked = true
     };
 
 };
-

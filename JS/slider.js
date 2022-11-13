@@ -3,117 +3,96 @@ let ColorActive = 'rgba(0, 0, 0, 1)';
 let ColorUnactive = 'rgba(0, 0, 0, 0.255)';
 let ColorActiveBlack = 'white';
 let ColorUnactiveBlack = 'rgb(136, 136, 136)';
+let slideButncount = 0;
+let Slibtnarr = []
+let allslides = 7
 const Panel = document.querySelector('.SliPanel');
 const Slider = document.querySelector('.slider');
-const But1 = document.querySelector('#SliCirc1');
-const But2 = document.querySelector('#SliCirc2');
-const But3 = document.querySelector('#SliCirc3');
-const But4 = document.querySelector('#SliCirc4');
-const But5 = document.querySelector('#SliCirc5');
+
+function CreateSlideBtn() {
+    while (slideButncount <= (allslides - 1)) {
+        let slibtn = document.createElement('span')
+        slibtn.className = 'SliCirc'
+        slibtn.id = `SliCirc${slideButncount + 1}`
+        Panel.append(slibtn)
+        Slibtnarr[slideButncount] = document.querySelector(`#SliCirc${slideButncount + 1}`)
+        slideButncount++
+    }
+}
+
+CreateSlideBtn()
 
 function Slides() {
+
+    if (Slide > allslides) {
+        Slide = 1
+    }
+    if (Slide < 1) {
+        Slide = allslides
+    }
+
+    for (let i = 1; i <= allslides; i++) {
+        if (Slide == i) {
+            if (theme == 1) {
+                Slibtnarr[i - 1].style.background = ColorActiveBlack;
+            } else {
+                Slibtnarr[i - 1].style.background = ColorActive;
+            }
+        } else {
+            if (theme == 1) {
+                Slibtnarr[i - 1].style.background = ColorUnactiveBlack;
+            } else {
+                Slibtnarr[i - 1].style.background = ColorUnactive;
+            }
+        }
+    }
+
+
     if (Slide == 1) {
         Slider.style.backgroundImage = 'url(IMAGE/Shreks.jpg)';
-        if (theme == 1) {
-            But1.style.background = ColorActiveBlack;
-        } else {
-            But1.style.background = ColorActive;
-        }
-    } else {
-        if (theme == 1) {
-            But1.style.background = ColorUnactiveBlack;
-        } else {
-            But1.style.background = ColorUnactive;
-        }
-    };
+    }
     if (Slide == 2) {
         Slider.style.backgroundImage = 'url(IMAGE/KoshkaJena.jpg)';
-        if (theme == 1) {
-            But2.style.background = ColorActiveBlack;
-        } else {
-            But2.style.background = ColorActive;
-        }
-    } else {
-        if (theme == 1) {
-            But2.style.background = ColorUnactiveBlack;
-        } else {
-            But2.style.background = ColorUnactive;
-        }
-    };
+    }
     if (Slide == 3) {
         Slider.style.backgroundImage = 'url(IMAGE/hitler.jpg)';
-        if (theme == 1) {
-            But3.style.background = ColorActiveBlack;
-        } else {
-            But3.style.background = ColorActive;
-
-        }
-    } else {
-        if (theme == 1) {
-            But3.style.background = ColorUnactiveBlack;
-        } else {
-            But3.style.background = ColorUnactive;
-        }
-    };
+    }
     if (Slide == 4) {
         Slider.style.backgroundImage = 'url(IMAGE/Ukrain.jpg)';
-        if (theme == 1) {
-            But4.style.background = ColorActiveBlack;
-        } else {
-            But4.style.background = ColorActive;
-
-        }
-    } else {
-        if (theme == 1) {
-            But4.style.background = ColorUnactiveBlack;
-        } else {
-            But4.style.background = ColorUnactive;
-        }
     };
     if (Slide == 5) {
         Slider.style.backgroundImage = 'url(IMAGE/Armenia.jpg)';
-        if (theme == 1) {
-            But5.style.background = ColorActiveBlack;
-        } else {
-            But5.style.background = ColorActive;
-
-        }
-    } else {
-        if (theme == 1) {
-            But5.style.background = ColorUnactiveBlack;
-        } else {
-            But5.style.background = ColorUnactive;
-        }
     };
+    if (Slide == 6) {
+        Slider.style.backgroundImage = 'url(IMAGE/Папич.jpg)';
+    };
+    if (Slide == 7) {
+        Slider.style.backgroundImage = 'url(IMAGE/viktor-korneplod.jpg)';
+    };
+
 };
 
 Slides();
 
-But1.addEventListener('click', function () {
-    Slide = 1;
-    Slides();
-});
-But2.addEventListener('click', function () {
-    Slide = 2;
-    Slides();
-});
-But3.addEventListener('click', function () {
-    Slide = 3;
-    Slides();
-});
-But4.addEventListener('click', function () {
-    Slide = 4;
-    Slides();
-});
-But5.addEventListener('click', function () {
-    Slide = 5;
-    Slides();
-});
+for (let f = 1; f <= allslides; f++) {
+    Slibtnarr[f - 1].addEventListener('click', function () {
+        Slide = f;
+        Slides();
+    });
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.keycode == "39" || e.code == "ArrowRight") {
+        Slide++;
+        Slides()
+
+    } else if (e.keycode == "37" || e.code == "ArrowLeft") {
+        Slide--;
+        Slides()
+    }
+})
 
 setInterval(() => {
-    Slides(Slide);
     Slide++;
-    if (Slide > 4) {
-        Slide = 1
-    }
+    Slides()
 }, 6000);

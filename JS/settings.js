@@ -43,9 +43,7 @@ function loggined(name, img, admin) {
     }
 }
 
-
-
-document.querySelector('.loginBut').addEventListener('click', () => {
+function userChange() {
     let curruser = {
         login: String(inplog.value),
         password: String(inppas.value)
@@ -57,8 +55,25 @@ document.querySelector('.loginBut').addEventListener('click', () => {
             localStorage.setItem("user", 1)
         }
     }
+}
+
+
+document.querySelector('.loginBut').addEventListener('click', () => {
+    userChange()
 })
 
+
+inppas.addEventListener('keydown', (e) => {
+    if (e.code == "Enter" || e.keycode == "39" || e.keycode == "13") {
+        userChange()
+    }
+})
+
+inplog.addEventListener('keydown', (e) => {
+    if (e.code == "Enter" || e.keycode == "39" || e.keycode == "13") {
+        inppas.focus()
+    }
+})
 
 function userChecker() {
     if (localStorage.getItem("user") == 1) {
@@ -76,15 +91,19 @@ document.querySelector('.quitBut').addEventListener('click', () => {
     userChecker()
 })
 
-
-setInterval(() => {
-    if (dialogModal.style.opacity == '0') {
-        document.querySelector('body').style.overflow = 'auto'
-    } else {
-        document.querySelector('body').style.overflow = 'hidden'
-    }
-}, 600);
-
 setInterval(() => {
     userChecker()
 }, 0);
+
+const themechecked = document.querySelector('.inpcheck')
+themechecked.addEventListener('click', () => {
+    if (localStorage.getItem("darkmode") == 1) {
+        localStorage.setItem("darkmode", 2)
+        themechecked.checked = false
+        window.location.reload()
+    } else {
+        localStorage.setItem("darkmode", 1)
+        themechecked.checked = true
+        window.location.reload()
+    }
+})

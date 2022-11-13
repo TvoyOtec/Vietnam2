@@ -3,22 +3,26 @@
 
 main {
     margin: 0;
+    height: auto;
 }
 
 body {
     touch-action: manipulation;
 }
 
+
 .settings {
     width: clamp(500px, 60%, 800px);
     height: 850px;
     margin-top: 100px;
     margin-left: clamp(20px, 25%, 250px);
-    background: -webkit-linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
+    /*background: -webkit-linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
     background: linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
+    */
     /*background: -webkit-linear-gradient(0deg, #3561e8, #4a7ef2, #558df6);
     background: linear-gradient(0deg, #3561e8, #4a7ef2, #558df6);
     */
+    background: white;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -44,7 +48,7 @@ dialog {
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
-    opacity: 1;
+    opacity: 0;
 }
 
 
@@ -63,10 +67,9 @@ dialog img {
 }
 
 .logBut {
+    border: 0.5px solid rgba(0, 0, 0, 0.377);
     margin-top: 50px;
     margin-left: clamp(10px, 40%, 255px);
-    background: rgba(255, 255, 255, 0.219);
-    border: 1px solid rgb(230, 230, 230);
     width: 200px;
     height: 60px;
     border-radius: 25px;
@@ -74,7 +77,6 @@ dialog img {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-size: 20px;
     backdrop-filter: blur(5px);
@@ -82,6 +84,12 @@ dialog img {
         inset 0 0 10px rgba(255, 255, 255, 0.123);
     transition: 0.6s;
     z-index: 1;
+}
+
+.logButBlack {
+    background: rgba(255, 255, 255, 0.219);
+    border: 1px solid rgb(230, 230, 230);
+    color: rgb(255, 255, 255);
 }
 
 .logBut:hover {
@@ -206,10 +214,11 @@ dialog img {
     width: 450px;
     height: 400px;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0px 15px rgba(116, 116, 116, 0.37),
-        inset 0 0 10px rgba(255, 255, 255, 0.123);
-    background: rgba(255, 255, 255, 0.219);
-    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0 0px 15px rgba(27, 162, 180, 0.651),
+        inset 0 0 10px rgba(255, 255, 255, 0.63);
+    /* background: rgba(255, 255, 255, 0.219); */
+    background: -webkit-linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
+    background: linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -222,7 +231,7 @@ dialog img {
 }
 
 .loginlogo {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.247);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.438);
     width: 100px;
     height: 100px;
     margin-left: 178px;
@@ -248,7 +257,7 @@ dialog img {
     box-shadow: 0 0px 15px rgba(116, 116, 116, 0.37), inset 0 0 10px rgba(255, 255, 255, 0.123);
     background: rgba(255, 255, 255, 0.219);
     border: 1px solid rgb(230, 230, 230);
-    color: rgba(51, 51, 51, 0.897);
+    color: rgb(255, 255, 255);
     font-size: 18px;
     transition: 0.4s;
     -webkit-transition: 0.4s;
@@ -278,8 +287,7 @@ dialog img {
     backdrop-filter: blur(5px);
     box-shadow: 0 0px 15px rgba(116, 116, 116, 0.37), inset 0 0 10px rgba(255, 255, 255, 0.123);
     background: rgba(255, 255, 255, 0.219);
-    border: 1px solid rgb(230, 230, 230);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     width: 300px;
     height: 50px;
     margin-top: 50px;
@@ -291,16 +299,164 @@ dialog img {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    cursor: crosshair;
+}
+
+
+.parameters {
+    width: clamp(200px, 80%, 600px);
+    height: 200px;
+    margin-left: clamp(20px, 10%, 100px);
+    background: -webkit-linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
+    background: linear-gradient(90deg, #9ec8ff, #85baff, #85baff);
+    margin-top: 100px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0px 15px rgba(27, 162, 180, 0.651),
+        inset 0 0 10px rgba(255, 255, 255, 0.63);
+    padding: 0;
+    overflow: hidden;
+}
+
+.check {
+    display: flex;
+    width: 60px;
+    background: rgb(28, 109, 202);
+    border-radius: 60px;
+    height: 30px;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
+    border: 2px solid rgb(43, 149, 182);
+    box-shadow: 0 0 5px white;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.check::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: white;
+    position: absolute;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.inpcheck {
+    appearance: none;
+    width: 60px;
+    cursor: pointer;
+    z-index: 3;
+    height: 30px;
+    position: absolute;
+}
+
+.inpcheck:checked~.check::after {
+    transform: translateX(30px);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+}
+
+.inpcheck:checked~.check {
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    background: rgb(12, 165, 12);
+    border: 2px solid green;
+}
+
+.paramLi {
+    margin-top: 10px;
+    padding-left: 20px;
+    align-items: center;
+    list-style-type: none;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.219);
+    box-sizing: border-box;
+    height: 50px;
+    display: flex;
+}
+
+.paramLiTextx {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
 }
 
 @media screen and (max-device-width: 1300px) {
     .loginfo {
         margin-left: clamp(10px, 9%, 160px);
     }
+
+    .logBut {
+        margin-left: clamp(10px, 30%, 255px);
+    }
 }
 
 @media screen and (max-device-width: 500px) {
+    .paramLiTextx {
+        font-size: 40px;
+        margin-left: 100px;
+    }
+
+    .inpcheck:checked~.check {
+        border-width: 6px;
+    }
+
+    .inpcheck:checked~.check::after {
+        transform: translateX(60px);
+        -webkit-transform: translateX(60px);
+        -moz-transform: translateX(60px);
+        -ms-transform: translateX(60px);
+        -o-transform: translateX(60px);
+    }
+
+    .check::after {
+        height: 60px;
+        width: 60px;
+    }
+
+    .check,
+    .inpcheck {
+        border-width: 6px;
+        width: 120px;
+        height: 60px;
+    }
+
+    .paramLi {
+        height: 150px;
+    }
+
+    .parameters {
+        width: clamp(200px, 80%, 800px);
+        height: 400px;
+    }
 
     .cancelBut,
     .loginBut {

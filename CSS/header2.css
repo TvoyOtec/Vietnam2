@@ -72,8 +72,9 @@
     transition: 0.4s;
 }
 
-.CMButton:hover,
-.CMButtonACtive {
+
+.CalculateButton:hover,
+.CalculateButtonActive {
     box-shadow: 0 0 20px rgb(223, 201, 5);
     background: rgb(223, 201, 5);
 }
@@ -85,8 +86,8 @@
     background: rgb(13, 162, 199);
 }
 
-.CalculateButton:hover,
-.CalculateButtonActive {
+.CMButton:hover,
+.CMButtonACtive {
     box-shadow: 0 0 20px rgb(24, 185, 18);
     background: rgb(24, 185, 18);
 }

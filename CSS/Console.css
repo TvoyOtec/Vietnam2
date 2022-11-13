@@ -58,6 +58,10 @@ body {
     color: rgb(113, 112, 112);
 }
 
+#OutputConsole0 {
+    height: 50px;
+}
+
 .mobileBut {
     display: none;
 }
@@ -66,7 +70,7 @@ body {
     display: flex;
     width: 280px;
     height: 70px;
-    background: rgb(221, 202, 33);
+    background: rgb(92, 202, 29);
     margin-left: 490px;
     margin-top: 50px;
     color: white;
@@ -74,7 +78,7 @@ body {
     align-items: center;
     font-size: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgb(221, 202, 33);
+    box-shadow: 0 0 10px rgb(92, 202, 29);
     transition: 0.5s;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -82,11 +86,15 @@ body {
     -ms-user-select: none;
     user-select: none;
     cursor: pointer;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
 }
 
 .mobileBut:hover {
-    background: rgb(196, 179, 30);
-    box-shadow: 0 0 10px rgb(184, 168, 28);
+    background: rgb(58, 128, 17);
+    box-shadow: 0 0 10px rgb(58, 128, 17);
     color: rgb(214, 214, 214);
     transition: 0.5s;
 }
@@ -131,6 +139,10 @@ body {
         margin-top: 50px;
         font-size: 60px;
     }
+
+    #OutputConsole0 {
+        height: 150px;
+    }
 }
 
 @media screen and (max-device-width: 800px) and (min-device-width: 500px) {
@@ -162,6 +174,7 @@ body {
         margin-left: 320px;
         font-size: 35px;
     }
+
 }
 
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
