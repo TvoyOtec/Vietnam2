@@ -441,6 +441,11 @@ dialog img {
 }
 
 @media screen and (max-device-width: 500px) {
+    .paramLi-img img {
+        height: 80px;
+        width: 80px;
+    }
+
     .paramLiTextx {
         font-size: 40px;
         margin-left: 100px;
@@ -476,7 +481,7 @@ dialog img {
 
     .parameters {
         width: clamp(200px, 80%, 800px);
-        height: 400px;
+        height: 500px;
     }
 
     .cancelBut,
