@@ -1,6 +1,6 @@
-const body = document.querySelector('body');
-const header1 = document.querySelector('header');
-const header1a = document.querySelector('.hname_a');
+const body = document.querySelector('body'),
+    header1 = document.querySelector('header'),
+    header1a = document.querySelector('.hname_a');
 let theme = localStorage.getItem('darkmode');
 
 function HeadersChanger() {
@@ -61,6 +61,13 @@ function ThemeChecker5() {
         document.querySelector('.settings').style.background = 'rgb(65, 65, 65)'
         document.querySelector('.logBut').classList.add('logButBlack')
         document.querySelector('.inpcheck').checked = true
+    };
+
+};
+
+function ThemeChecker6() {
+    if (theme == 1) {
+        HeadersChanger()
     };
 
 };

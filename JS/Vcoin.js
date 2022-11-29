@@ -1,18 +1,19 @@
-let kolvo = 1;
-let yanBuy = 5;
-let socrating = parseInt(localStorage.getItem('ratetick'), 10);
-let yan = parseInt(localStorage.getItem('yantick'), 10);;
-const list = document.querySelector('.bonusList');
-const button = document.querySelector('#taiwanBut');
-const rateinfo = document.querySelector('.socCredit');
-const yaninfo = document.querySelector('.Yan');
-const oneCost = 1000;
+let kolvo = 1,
+    yanBuy = 5,
+    socrating = parseInt(localStorage.getItem('ratetick'), 10),
+    yan = parseInt(localStorage.getItem('yantick'), 10);
+
+const list = document.querySelector('.bonusList'),
+    button = document.querySelector('#taiwanBut'),
+    rateinfo = document.querySelector('.socCredit'),
+    yaninfo = document.querySelector('.Yan'),
+    oneCost = 1000;
 
 // boosts
 while (kolvo < 31) {
     socrat = yanBuy * oneCost;
-    let li = document.createElement('a');
-    let themes = localStorage.getItem('darkmode')
+    let li = document.createElement('a'),
+        themes = localStorage.getItem('darkmode')
     if (themes == 1) {
         li.innerHTML = `<li class="liBlack" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLusBlack">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`;
     } else {

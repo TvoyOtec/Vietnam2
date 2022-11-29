@@ -1,14 +1,19 @@
-let Slide = 1;
-let ColorActive = 'rgba(0, 0, 0, 1)';
-let ColorUnactive = 'rgba(0, 0, 0, 0.255)';
-let ColorActiveBlack = 'white';
-let ColorUnactiveBlack = 'rgb(136, 136, 136)';
-let slideButncount = 0;
-let Slibtnarr = []
-let allslides = 7
-const Panel = document.querySelector('.SliPanel');
-const Slider = document.querySelector('.slider');
+let Slide = 1,
+    ColorActive = 'rgba(0, 0, 0, 1)',
+    ColorUnactive = 'rgba(0, 0, 0, 0.255)',
+    ColorActiveBlack = 'white',
+    ColorUnactiveBlack = 'rgb(136, 136, 136)',
+    slideButncount = 0,
+    Slibtnarr = [],
+    allslides = 7,
+    TouchX,
+    TouchX2,
+    MouseX,
+    MouseX2
+const Panel = document.querySelector('.SliPanel'),
+    Slider = document.querySelector('.slider');
 
+// create buttons under slider
 function CreateSlideBtn() {
     while (slideButncount <= (allslides - 1)) {
         let slibtn = document.createElement('span')
@@ -22,8 +27,9 @@ function CreateSlideBtn() {
 
 CreateSlideBtn()
 
-function Slides() {
 
+//main
+function Slides() {
     if (Slide > allslides) {
         Slide = 1
     }
@@ -46,7 +52,6 @@ function Slides() {
             }
         }
     }
-
 
     if (Slide == 1) {
         Slider.style.backgroundImage = 'url(IMAGE/Shreks.jpg)';
@@ -74,6 +79,8 @@ function Slides() {
 
 Slides();
 
+
+// button click change slide image
 for (let f = 1; f <= allslides; f++) {
     Slibtnarr[f - 1].addEventListener('click', function () {
         Slide = f;
@@ -81,6 +88,8 @@ for (let f = 1; f <= allslides; f++) {
     });
 }
 
+
+// arrow change slide
 document.addEventListener('keydown', (e) => {
     if (e.keycode == "39" || e.code == "ArrowRight") {
         Slide++;
@@ -92,7 +101,29 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
+
+// mobile swipe
+document.addEventListener('touchstart', (e) => TouchX = e.target == Slider ? e.touches[0].clientX : '')
+document.addEventListener('touchmove', (e) => TouchX2 = TouchX - e.touches[0].clientX > 0 ? Slide + 1 : Slide - 1)
+document.addEventListener('touchend', () => {
+    if (!TouchX || 0 === TouchX.length) return;
+    Slide = TouchX2
+    Slides()
+})
+
+
+// pc swipe
+document.addEventListener('mousedown', (e) => MouseX = e.target == Slider ? e.clientX : '')
+document.addEventListener('mousemove', (e) => MouseX2 = MouseX - e.clientX > 0 ? Slide + 1 : Slide - 1)
+document.addEventListener('mouseup', () => {
+    if (!MouseX || 0 === MouseX.length) return;
+    Slide = MouseX2
+    Slides()
+})
+
+
+// auto change slide image
 setInterval(() => {
     Slide++;
     Slides()
-}, 6000);
+}, 7000);

@@ -1,9 +1,10 @@
-const inputConsole = document.querySelector('#InputConsole');
-const OutputConsole = document.querySelector('.viewConsole');
-const ButtonMobile = document.querySelector('.mobileBut')
-const console = document.querySelector('.console')
-let darkmode = localStorage.getItem("darkmode")
-let Count = 1;
+const inputConsole = document.querySelector('#InputConsole'),
+    OutputConsole = document.querySelector('.viewConsole'),
+    ButtonMobile = document.querySelector('.mobileBut'),
+    console = document.querySelector('.console')
+
+let darkmode = localStorage.getItem("darkmode"),
+    Count = 1;
 
 
 function buttonOn() {
@@ -48,9 +49,10 @@ function AddPayDay(many) {
 
 function Main(e) {
     YourCommandWriter()
-    let huys = Count;
-    let preCommandNum = huys - 2;
-    let preCommand = document.getElementById(`OutputConsole${preCommandNum}`).textContent;
+    let huys = Count,
+        preCommandNum = huys - 2,
+        preCommand = document.getElementById(`OutputConsole${preCommandNum}`).textContent;
+
     if (inputConsole.value == "changecoins") {
         if (localStorage.getItem("admin") == 1) {
             OutpCommand("how many?")

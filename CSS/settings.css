@@ -402,11 +402,32 @@ dialog img {
     display: flex;
 }
 
+.paramLi:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.404);
+}
+
 .paramLiTextx {
     font-size: 20px;
     text-transform: uppercase;
+    text-decoration: none;
     color: rgb(255, 255, 255);
     margin-left: 20px;
+}
+
+.paramLi-img {
+    box-sizing: border-box;
+}
+
+.paramLi-img img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100);
+    -webkit-filter: invert(100);
+}
+
+.paramLi input {
+    display: none;
 }
 
 @media screen and (max-device-width: 1300px) {

@@ -1,9 +1,11 @@
-const dialogModal = document.querySelector('dialog')
-const inplog = document.querySelector('#inplog')
-const inppas = document.querySelector('#inppas')
-const logbut = document.querySelector('#logbut')
-const loginfo = document.querySelector('.loginfo')
+const dialogModal = document.querySelector('dialog'),
+    inplog = document.querySelector('#inplog'),
+    inppas = document.querySelector('#inppas'),
+    logbut = document.querySelector('#logbut'),
+    loginfo = document.querySelector('.loginfo')
+
 let Root = localStorage.getItem("admin")
+
 if (!Root || 0 === Root.length) {
     Root = 0;
 };
@@ -91,11 +93,38 @@ document.querySelector('.quitBut').addEventListener('click', () => {
     userChecker()
 })
 
+function SaveData() {
+    let blob = new Blob([
+        localStorage.getItem("user"),
+        "15328",
+        localStorage.getItem("admin"),
+        "15328",
+        localStorage.getItem("ratetick"),
+        "15328",
+        localStorage.getItem("yantick")
+    ], { type: 'text/plain' })
+    document.querySelector('#SaveDataA').href = URL.createObjectURL(blob)
+}
+
+document.querySelector('#LodaDataInp').addEventListener('change', function () {
+    let filereader = new FileReader()
+    filereader.readAsText(this.files[0])
+    filereader.onload = () => {
+        let NewResult = filereader.result.split('15328')
+        localStorage.setItem('user', NewResult[0])
+        localStorage.setItem('admin', NewResult[1])
+        localStorage.setItem('ratetick', NewResult[2])
+        localStorage.setItem('yantick', NewResult[3])
+        console.log(filereader, NewResult)
+    }
+})
+
 setInterval(() => {
     userChecker()
+    SaveData()
 }, 0);
 
-const themechecked = document.querySelector('.inpcheck')
+const themechecked = document.querySelector('#themeChangeSetting')
 themechecked.addEventListener('click', () => {
     if (localStorage.getItem("darkmode") == 1) {
         localStorage.setItem("darkmode", 2)
