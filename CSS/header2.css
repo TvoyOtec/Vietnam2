@@ -34,7 +34,7 @@
     height: 217px;
     padding: 0;
     margin-left: 23px;
-    margin-top: 250px;
+    margin-top: 190px;
 }
 
 .menu li {
@@ -61,7 +61,8 @@
 .CMButtonACtive #headerIMG,
 .CalculateButtonActive #headerIMG,
 .ChinaButtonActive #headerIMG,
-.SetButtonActive #headerIMG {
+.SetButtonActive #headerIMG,
+.downloadButActive #headerIMG {
     -webkit-filter: invert(100%);
     filter: invert(100%);
     width: 40px;
@@ -98,13 +99,19 @@
     background: rgb(180, 89, 89);
 }
 
+.downloadBut:hover,
+.downloadButActive {
+    box-shadow: 0 0 20px rgb(152, 59, 196);
+    background: rgb(152, 59, 196);
+}
+
 .butUpA {
     display: block;
     width: 56px;
     height: 46px;
     border-radius: 50%;
     margin-left: 18px;
-    margin-top: 300px;
+    margin-top: 350px;
     cursor: pointer;
 }
 
@@ -183,7 +190,7 @@
 
     .menu li {
         display: inline-block;
-        width: 16.3%;
+        width: 13.9%;
         height: 100%;
     }
 
@@ -203,7 +210,8 @@
     .CMButtonACtive #headerIMG,
     .CalculateButtonActive #headerIMG,
     .ChinaButtonActive #headerIMG,
-    .SetButtonActive #headerIMG {
+    .SetButtonActive #headerIMG,
+    .downloadButActive #headerIMG {
         filter: invert(100%);
         margin: 0;
         width: 76px;
@@ -215,11 +223,11 @@
 
 @media screen and (max-device-width: 800px) and (min-device-width: 500px) {
     .butUpA {
-        margin-top: 350px;
+        margin-top: 400px;
     }
 
     .menu {
-        margin-top: 400px;
+        margin-top: 250px;
     }
 
     .hname2 a {
@@ -229,6 +237,11 @@
 
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
     .butUpA {
-        margin-top: 180px;
+        margin-top: 320px;
+
+    }
+
+    .menu {
+        margin-top: 130px;
     }
 }

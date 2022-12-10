@@ -39,17 +39,15 @@ function Slides() {
 
     for (let i = 1; i <= allslides; i++) {
         if (Slide == i) {
-            if (theme == 1) {
-                Slibtnarr[i - 1].style.background = ColorActiveBlack;
-            } else {
-                Slibtnarr[i - 1].style.background = ColorActive;
-            }
+            theme == 1 ?
+                Slibtnarr[i - 1].style.background = ColorActiveBlack
+                :
+                Slibtnarr[i - 1].style.background = ColorActive
         } else {
-            if (theme == 1) {
-                Slibtnarr[i - 1].style.background = ColorUnactiveBlack;
-            } else {
-                Slibtnarr[i - 1].style.background = ColorUnactive;
-            }
+            theme == 1 ?
+                Slibtnarr[i - 1].style.background = ColorUnactiveBlack
+                :
+                Slibtnarr[i - 1].style.background = ColorUnactive
         }
     }
 
@@ -91,11 +89,11 @@ for (let f = 1; f <= allslides; f++) {
 
 // arrow change slide
 document.addEventListener('keydown', (e) => {
-    if (e.keycode == "39" || e.code == "ArrowRight") {
+    if (e.keycode == 39 || e.code == "ArrowRight") {
         Slide++;
         Slides()
 
-    } else if (e.keycode == "37" || e.code == "ArrowLeft") {
+    } else if (e.keycode == 37 || e.code == "ArrowLeft") {
         Slide--;
         Slides()
     }
@@ -103,9 +101,9 @@ document.addEventListener('keydown', (e) => {
 
 
 // mobile swipe
-document.addEventListener('touchstart', (e) => TouchX = e.target == Slider ? e.touches[0].clientX : '')
-document.addEventListener('touchmove', (e) => TouchX2 = TouchX - e.touches[0].clientX > 0 ? Slide + 1 : Slide - 1)
-document.addEventListener('touchend', () => {
+Slider.addEventListener('touchstart', (e) => TouchX = e.touches[0].clientX)
+Slider.addEventListener('touchmove', (e) => TouchX2 = TouchX - e.touches[0].clientX > 0 ? Slide + 1 : Slide - 1)
+Slider.addEventListener('touchend', () => {
     if (!TouchX || 0 === TouchX.length) return;
     Slide = TouchX2
     Slides()
@@ -113,14 +111,13 @@ document.addEventListener('touchend', () => {
 
 
 // pc swipe
-document.addEventListener('mousedown', (e) => MouseX = e.target == Slider ? e.clientX : '')
-document.addEventListener('mousemove', (e) => MouseX2 = MouseX - e.clientX > 0 ? Slide + 1 : Slide - 1)
-document.addEventListener('mouseup', () => {
+Slider.addEventListener('mousedown', (e) => MouseX = e.clientX)
+Slider.addEventListener('mousemove', (e) => MouseX2 = MouseX - e.clientX > 0 ? Slide + 1 : Slide - 1)
+Slider.addEventListener('mouseup', () => {
     if (!MouseX || 0 === MouseX.length) return;
     Slide = MouseX2
     Slides()
 })
-
 
 // auto change slide image
 setInterval(() => {

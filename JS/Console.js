@@ -7,12 +7,24 @@ let darkmode = localStorage.getItem("darkmode"),
     Count = 1;
 
 
+function SendChecker() {
+    if (localStorage.getItem("sendchecked") == 2) {
+        ButtonMobile.style.display = 'flex'
+    } else {
+        ButtonMobile.style.display = 'none'
+    }
+}
+
+SendChecker()
+
 function buttonOn() {
-    ButtonMobile.style.display = 'flex';
+    localStorage.setItem("sendchecked", 2)
+    SendChecker()
 }
 
 function buttonOff() {
-    ButtonMobile.style.display = 'none';
+    localStorage.setItem("sendchecked", 1)
+    SendChecker()
 }
 
 function OutpCommand(name) {
@@ -21,7 +33,7 @@ function OutpCommand(name) {
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`)
     OutputConsolep.innerHTML = `- ${name}`;
     OutputConsolep.className = 'outputConsole';
-    OutputConsolep.style.color = 'rgb(250, 71, 71)';
+    OutputConsolep.style.color = 'rgb(189, 132, 132)';
     OutputConsole.append(OutputConsolep);
     OutputConsole.scrollTo(0, Count * 100)
     inputConsole.value = "";
@@ -33,7 +45,7 @@ function YourCommandWriter() {
     OutputConsolep.setAttribute('id', `OutputConsole${Count}`);
     OutputConsolep.className = 'outputConsole';
     OutputConsolep.innerHTML = `- ${inputConsole.value}`;
-    OutputConsolep.style.color = 'rgb(114, 197, 107)';
+    OutputConsolep.style.color = 'rgb(138, 187, 133)';
     OutputConsole.append(OutputConsolep);
 }
 
@@ -54,34 +66,30 @@ function Main(e) {
         preCommand = document.getElementById(`OutputConsole${preCommandNum}`).textContent;
 
     if (inputConsole.value == "changecoins") {
-        if (localStorage.getItem("admin") == 1) {
-            OutpCommand("how many?")
-        } else {
-            OutpCommand("Woman moment");
-            inputConsole.value = "";
-        }
-    } else if (preCommand == "- changecoins" && localStorage.getItem("admin") == 1) {
+        localStorage.getItem("admin") == 1 ? OutpCommand("how many?") : OutpCommand("Woman moment"); inputConsole.value = ""
+    }
+    else if (preCommand == "- changecoins" && localStorage.getItem("admin") == 1) {
         let coinSCome = parseInt(inputConsole.value);
         AddCoins(coinSCome)
         successCommand(`Social rating = ${coinSCome}`)
-    } else if (inputConsole.value == "changepayday") {
-        if (localStorage.getItem("admin") == 1) {
-            OutpCommand("how many?")
-        } else {
-            OutpCommand("Woman moment");
-            inputConsole.value = "";
-        }
-    } else if (preCommand == "- changepayday" && localStorage.getItem("admin") == 1) {
+    }
+    else if (inputConsole.value == "changepayday") {
+        localStorage.getItem("admin") == 1 ? OutpCommand("how many?") : OutpCommand("Woman moment"); inputConsole.value = "";
+    }
+    else if (preCommand == "- changepayday" && localStorage.getItem("admin") == 1) {
         let PaydayCome = parseInt(inputConsole.value);
         AddPayDay(PaydayCome)
         successCommand(`Заралата теперь равна ${PaydayCome}`)
-    } else if (inputConsole.value == "buttonon") {
+    }
+    else if (inputConsole.value == "buttonon") {
         buttonOn()
         successCommand(`Кнопка включена`)
-    } else if (inputConsole.value == "buttonoff") {
+    }
+    else if (inputConsole.value == "buttonoff") {
         buttonOff()
         successCommand(`Кнопка выключена`)
-    } else if (inputConsole.value == "help") {
+    }
+    else if (inputConsole.value == "help") {
         if (localStorage.getItem("admin") == 1) {
             OutpCommand(" changepayday");
             OutpCommand(" changecoins");
@@ -105,7 +113,7 @@ function Main(e) {
 
 }
 inputConsole.addEventListener('keyup', function (e) {
-    if (e.code == "Enter" || e.keycode == "39" || e.keycode == "13") {
+    if (e.code == "Enter" || e.keycode == 39 || e.keycode == 13) {
         Main(e)
         inputConsole.value = "";
     }

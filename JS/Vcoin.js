@@ -14,11 +14,10 @@ while (kolvo < 31) {
     socrat = yanBuy * oneCost;
     let li = document.createElement('a'),
         themes = localStorage.getItem('darkmode')
-    if (themes == 1) {
-        li.innerHTML = `<li class="liBlack" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLusBlack">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`;
-    } else {
+    themes == 1 ?
+        li.innerHTML = `<li class="liBlack" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLusBlack">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`
+        :
         li.innerHTML = `<li class="li" type="none" id="${kolvo}"><img class="liIMG" src="IMAGE/plus.png" alt="" id="${kolvo}"><p id="${kolvo}" class="YanPLus">+${yanBuy} ¥</p> <p id="${kolvo}" class="socMinus">-${socrat} social credit</p></li>`;
-    }
     li.className = 'liA';
     li.setAttribute("href", "#li");
     li.setAttribute("id", `${kolvo}`);
@@ -58,7 +57,6 @@ button.addEventListener('click', function plus() {
     ratingMonitor();
 });
 
-// notification
 
 
 // boost add script
@@ -86,24 +84,6 @@ list.addEventListener('click', e => {
         }
     }
 })
-
-// click effect
-// let CoinButton = document.querySelectorAll('.liA')
-// CoinButton.forEach(btn => {
-//     btn.addEventListener('click', function (e) {
-//         let x = e.pageX
-//         let y = e.pageY
-//         let rippleeffect = document.createElement('span')
-//         rippleeffect.className = "ripple"
-//         rippleeffect.style.left = `${x}px`
-//         rippleeffect.style.top = `${y}px`
-//         this.appendChild(rippleeffect)
-
-//         setInterval(() => {
-//             rippleeffect.remove()
-//         }, 900);
-//     })
-// })
 
 
 setInterval("ratingMonitor()", 100);

@@ -89,18 +89,10 @@ ClearAllBut.addEventListener('click', function () {
     multiple = false
 })
 ClearBut.addEventListener('click', function () {
-    if (inputCalc.value[inputCalc.value.length - 1] === '-') {
-        minus = false
-    }
-    if (inputCalc.value[inputCalc.value.length - 1] === '+') {
-        plus = false
-    }
-    if (inputCalc.value[inputCalc.value.length - 1] === '÷') {
-        devide = false
-    }
-    if (inputCalc.value[inputCalc.value.length - 1] === '×') {
-        multiple = false
-    }
+    inputCalc.value[inputCalc.value.length - 1] === '-' ? minus = false : null;
+    inputCalc.value[inputCalc.value.length - 1] === '+' ? plus = false : null;
+    inputCalc.value[inputCalc.value.length - 1] === '÷' ? devide = false : null;
+    inputCalc.value[inputCalc.value.length - 1] === '×' ? multiple = false : null;
     console.log(plus, minus, devide, multiple)
     inputCalc.value = inputCalc.value.slice(0, -1)
 })

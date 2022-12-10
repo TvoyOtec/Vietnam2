@@ -1,0 +1,195 @@
+@import url("header2.css");
+
+main {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    touch-action: manipulation;
+}
+
+.downloadList {
+    width: clamp(500px, 60%, 800px);
+    height: 850px;
+    margin-top: 100px;
+    margin-left: clamp(20px, 25%, 250px);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding-top: 10px;
+}
+
+.downloadlistUL {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.downloadlistLi,
+.downloadlistLiBlack {
+    cursor: default;
+    flex-direction: row;
+    display: flex;
+    width: clamp(400px, 87%, 620px);
+    height: 80px;
+    margin-top: 40px;
+    margin-left: clamp(25px, 7%, 50px);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.downloadlistLi {
+    box-shadow: 0 0 10px rgba(83, 83, 83, 0.158);
+    background: rgba(83, 83, 83, 0.158);
+}
+
+.downloadlistLiBlack {
+    box-shadow: 0 0 10px rgba(251, 244, 255, 0.158);
+    background: rgba(251, 244, 255, 0.158);
+}
+
+.downloadIMG {
+    border-radius: 10px;
+    margin-top: 13px;
+    margin-left: 15px;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.downloadName {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 23px;
+    width: 150px;
+}
+
+
+.downloadButtonLi,
+.downloadButtonLiBlack {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.downloadButtonLi {
+    color: black;
+}
+
+.downloadButtonLiBlack {
+    color: white;
+}
+
+.downloadButtonLi:hover {
+    color: white;
+    background: rgba(181, 113, 216, 0.623);
+    box-shadow: 0 0 40px rgba(147, 91, 175, 0.589);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.downloadButtonLiBlack:hover {
+    color: rgb(71, 71, 71);
+    background: rgba(196, 122, 233, 0.801);
+    box-shadow: 0 0 40px rgba(147, 91, 175, 0.589);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.downloadButtonLi:hover .downloadWhat {
+    color: rgba(212, 212, 212, 0.884);
+}
+
+.downloadButtonLiBlack:hover .downloadWhatBlack {
+    color: rgba(56, 56, 56, 0.616);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.downloadWhat,
+.downloadWhatBlack {
+    position: absolute;
+    width: 50px;
+    margin-top: 5px;
+}
+
+.downloadWhat {
+    color: rgba(70, 70, 70, 0.795);
+}
+
+.downloadWhatBlack {
+    color: rgba(255, 255, 255, 0.616);
+}
+
+@media screen and (max-device-width: 500px) {
+    main {
+        height: 2500px;
+    }
+
+    .downloadList {
+        width: 90%;
+        margin-left: 5%;
+        height: 1700px;
+    }
+
+    .downloadlistLi,
+    .downloadlistLiBlack {
+        margin-top: 100px;
+        width: 100%;
+        margin-left: 0;
+        height: 160px;
+    }
+
+    .downloadIMG {
+        margin-top: 30px;
+        margin-left: 20px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .downloadName {
+        margin-top: 45px;
+        font-size: 40px;
+        width: 350px;
+    }
+
+    .downloadWhat,
+    .downloadWhatBlack {
+        font-size: 25px;
+        left: 155px;
+    }
+}

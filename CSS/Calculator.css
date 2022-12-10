@@ -212,6 +212,10 @@ input::-webkit-inner-spin-button {
     .mainEbat {
         height: 3000px;
     }
+
+    main {
+        height: 3500px;
+    }
 }
 
 @media screen and (max-device-width: 800px) and (min-device-width: 500px) {
@@ -231,6 +235,7 @@ input::-webkit-inner-spin-button {
     .historylistBlack li {
         font-size: 30px;
     }
+
 }
 
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px) {

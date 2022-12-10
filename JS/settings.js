@@ -4,18 +4,27 @@ const dialogModal = document.querySelector('dialog'),
     logbut = document.querySelector('#logbut'),
     loginfo = document.querySelector('.loginfo')
 
-let Root = localStorage.getItem("admin")
-
-if (!Root || 0 === Root.length) {
-    Root = 0;
-};
-let user1 = {
+let users = [{
+    userNum: 1,
     login: 'Dora',
     password: 'Dura',
     name: 'Каво и шо',
     logo: 'IMAGE/user1.png',
     admin: true
-}
+},
+{
+    userNum: 2,
+    login: 'Adolf',
+    password: 'Hitler',
+    name: 'Joe Biden',
+    logo: 'IMAGE/user2.jpg',
+    admin: true
+}],
+    Root = localStorage.getItem("admin")
+
+if (!Root || 0 === Root.length) {
+    Root = 0;
+};
 
 logbut.addEventListener('click', () => {
     dialogModal.showModal()
@@ -29,6 +38,7 @@ function closemodal() {
         dialogModal.close()
     }, 600);
 }
+
 document.querySelector('.cancelBut').addEventListener('click', () => {
     closemodal()
 })
@@ -50,11 +60,13 @@ function userChange() {
         login: String(inplog.value),
         password: String(inppas.value)
     }
-    if (user1.login == curruser.login) {
-        if (user1.password == curruser.password) {
-            closemodal()
-            setTimeout(() => { successCommand(`Вы вошли как ${user1.name}`) }, 300);
-            localStorage.setItem("user", 1)
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].login === curruser.login) {
+            if (users[i].password === curruser.password) {
+                closemodal()
+                setTimeout(() => { successCommand(`Вы вошли как ${users[i].name}`) }, 300);
+                localStorage.setItem("user", i)
+            }
         }
     }
 }
@@ -66,30 +78,31 @@ document.querySelector('.loginBut').addEventListener('click', () => {
 
 
 inppas.addEventListener('keydown', (e) => {
-    if (e.code == "Enter" || e.keycode == "39" || e.keycode == "13") {
+    if (e.code == "Enter" || e.keycode == 39 || e.keycode == 13) {
         userChange()
     }
 })
 
 inplog.addEventListener('keydown', (e) => {
-    if (e.code == "Enter" || e.keycode == "39" || e.keycode == "13") {
+    if (e.code == "Enter" || e.keycode == 39 || e.keycode == 13) {
         inppas.focus()
     }
 })
 
 function userChecker() {
-    if (localStorage.getItem("user") == 1) {
-        loggined(`${user1.name}`, `${user1.logo}`, user1.admin)
-    } else if (localStorage.getItem("user") == 0) {
+    let user = localStorage.getItem("user")
+    if (user < 0) {
         Root = 0
         localStorage.setItem("admin", Root)
         logbut.style.display = 'inherit'
         loginfo.style.display = 'none'
+        return
     }
+    loggined(`${users[user].name}`, `${users[user].logo}`, users[user].admin)
 }
 
 document.querySelector('.quitBut').addEventListener('click', () => {
-    localStorage.setItem("user", 0)
+    localStorage.setItem("user", -1)
     userChecker()
 })
 
@@ -101,7 +114,11 @@ function SaveData() {
         "15328",
         localStorage.getItem("ratetick"),
         "15328",
-        localStorage.getItem("yantick")
+        localStorage.getItem("yantick"),
+        "15328",
+        localStorage.getItem("sendchecked"),
+        "15328",
+        localStorage.getItem('darkmode')
     ], { type: 'text/plain' })
     document.querySelector('#SaveDataA').href = URL.createObjectURL(blob)
 }
@@ -115,8 +132,11 @@ document.querySelector('#LodaDataInp').addEventListener('change', function () {
         localStorage.setItem('admin', NewResult[1])
         localStorage.setItem('ratetick', NewResult[2])
         localStorage.setItem('yantick', NewResult[3])
+        localStorage.setItem('sendchecked', NewResult[4])
+        localStorage.setItem('darkmode', NewResult[5])
         console.log(filereader, NewResult)
     }
+    window.location.reload()
 })
 
 setInterval(() => {
@@ -135,4 +155,25 @@ themechecked.addEventListener('click', () => {
         themechecked.checked = true
         window.location.reload()
     }
+})
+
+const sendchecked = document.querySelector('#sendChangeSetting'),
+    sendcheckedInput = document.querySelector('#sendChangeSettingInput')
+
+function SendButtonChecker() {
+    if (localStorage.getItem("sendchecked") == 1) {
+        sendcheckedInput.checked = false
+    } else {
+        sendcheckedInput.checked = true
+    }
+    console.log(sendcheckedInput.checked)
+}
+SendButtonChecker()
+sendchecked.addEventListener('click', () => {
+    if (localStorage.getItem("sendchecked") == 1) {
+        localStorage.setItem("sendchecked", 2)
+    } else {
+        localStorage.setItem("sendchecked", 1)
+    }
+    SendButtonChecker()
 })

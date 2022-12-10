@@ -194,23 +194,6 @@ main {
     height: 3500px;
 }
 
-/* .ripple {
-    position: absolute;
-    background: rgb(161, 161, 161);
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    animation: rippleeffect 1s linear infinite;
-    -webkit-animation: rippleeffect 1s linear infinite;
-    border-radius: 50%;
-    pointer-events: none;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-} */
 
 @keyframes rippleeffect {
     0% {
