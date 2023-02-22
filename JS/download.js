@@ -53,7 +53,12 @@ function createDownloadList() {
             downloadWhatClass = 'downloadWhat'
         }
         DownloadLi.className = downloadlistLiClass
-        DownloadLi.innerHTML = `<a class="${downloadButtonClass}" href="${downloadList[i].url}"><img class="downloadIMG" src="${downloadList[i].img}" alt=""><p class="downloadName">${downloadList[i].name}</p><span style="margin-left: ${downloadList[i].ml}px;" class="${downloadWhatClass}">${downloadList[i].what}</span></a>`
+        DownloadLi.innerHTML =
+            `<a class="${downloadButtonClass}" href="${downloadList[i].url}">
+            <img class="downloadIMG" src="${downloadList[i].img}" alt="">
+            <p class="downloadName">${downloadList[i].name}</p>
+            <span style="margin-left: ${downloadList[i].ml}px;" class="${downloadWhatClass}">${downloadList[i].what}</span>
+        </a>`
         document.querySelector('.downloadlistUL').append(DownloadLi)
     }
 }

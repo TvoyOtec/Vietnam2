@@ -72,18 +72,12 @@
     }
 
     .SliPanel {
-        margin-top: 20px;
+        grid-gap: clamp(5px, 3%, 30px);
     }
 }
 
 @media screen and (max-device-width: 1300px) and (min-device-width: 800px) {
     .SliderPos {
         height: 500px;
-    }
-}
-
-@media screen and (max-device-width: 800px) {
-    .SliPanel {
-        grid-gap: clamp(5px, 3%, 30px);
     }
 }
